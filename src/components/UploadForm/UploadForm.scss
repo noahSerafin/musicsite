@@ -1,0 +1,372 @@
+@use "../../sass/variables.scss" as *;
+
+.upload-form__span{
+    color: $threetonered;
+}
+.upload-form{
+    overflow-x: hidden;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0px 4px 4px $lightgrey;
+    padding: 2%;
+    padding-top: 30px;
+    display: flex;
+    flex-direction: column;
+    //position: relative;
+    margin-left: 1px;
+    width: 95%;
+    
+    margin-bottom: 2.5%;
+    .upload-form__header{
+        margin-left: 2.5%;//7%;
+        margin-right: 2.5%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .upload-form__header__header{
+            margin-bottom: 10px;
+            margin-top: 10px;
+            text-transform: uppercase;
+        }
+    }
+    .upload-form__header__progress, .upload-form__header__progress1, .upload-form__header__progress2, .upload-form__header__progress3, .upload-form__header__progress4, .upload-form__header__progress5{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 7%;
+        //osition: absolute;
+        right: 15%;//7%;
+        //top: 4.3%;
+        p{ margin: 0; }
+    }
+    .upload-form__header__progress5{
+        visibility: hidden;
+    }
+    .upload-form__header__progress1 p:nth-child(1){
+        font-weight: bold;
+        //background-color: $threetonered;
+    }
+    .upload-form__header__progress2 p:nth-child(2){
+        font-weight: bold;
+    }
+    .upload-form__header__progress3 p:nth-child(3){
+        font-weight: bold;
+    }
+    .upload-form__header__progress4 p:nth-child(4){
+        font-weight: bold;
+    }
+    .upload-form__label{
+        margin-bottom: 0.5rem;
+        margin-left: 0.2rem;
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 1.4rem;
+    }
+}
+.upload-form--step1{
+    
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    .upload-form--step1__left{
+        display: grid;
+        grid-template-columns: 1fr;
+        border-right: 1px solid $lightgrey;
+        padding: 5%;
+    }
+    .upload-form__uploader{
+        height: 100%;
+    }
+}
+.upload-form--step4{
+    display: flex;
+    flex-direction: column;
+}
+
+    /*.upload-form__tooltip{
+        color: $lightgrey;
+        border-radius: 5px;
+        width: 5px;
+        height: 5px;
+        margin-left: 5px;
+        border: 1px solid $lightlightgrey;
+    }*/
+
+.upload-form__input{
+    //border-radius: 4px;
+    outline: none;
+    height: 1.7rem;
+    //box-shadow: inset 1px 1px $lightlightgrey;
+    box-shadow: 1px 2px 2px 0px $lightgrey;
+    margin-bottom: 0.5rem;//0.7rem;
+    padding: 1px 2px;
+    border: 1px solid $lightgrey;
+    background-color: white;
+    .upload-form__input__select{
+        outline: none;
+        background-color: transparent;
+        border: none;
+        width: 100%;
+        height: 100%;
+    }
+}
+    .upload-form__uploader{
+        margin-left: 10%;
+        position: relative;
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;// flex-end;
+        background-color: white;
+        box-shadow: 0.5px 2px 2px 1px $lightgrey;
+        border: 1px solid $lightlightgrey;
+        //height: 250px;
+        .upload-form__uploader__input-container{
+            position: relative;
+            margin-top: 2%;
+            width: 28%;
+            .upload-form__uploader__input-container__input{
+                position: relative;
+                z-index: 2;
+                text-align: center;
+                width: 100%;
+                height: 100%;
+                opacity: 0;
+            }
+            .upload-form__uploader__input-container__button{
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: 1;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                height: 100%;
+                background-color: $threetonered;
+                border: none;
+                border-radius: 5px;
+                color: $offwhite;
+                box-shadow: 0px 8px 24px $lightgrey;
+            }
+        }
+        .upload-form__uploader__input-container:hover{
+            cursor: pointer;
+        }
+        //.upload-form__uploader__drop-zone{
+           
+            cursor: not-allowed;
+            //width: 100%;
+            //height: 100%;
+            //text-align: center;
+            //padding: 24px;
+            .upload-form__uploader__drop-zone__svg{
+                opacity: 0.3;
+                margin-top: 70px;
+                transform: scale(5.5);
+                margin-bottom: 25px;
+            }
+            .upload-form__uploader__input{
+                opacity: 1;
+                margin-bottom: 2.5%;
+                text-align: center;
+                padding: 2%;
+                
+            }
+        //}
+        
+    }
+.upload-form__uploader:hover,
+.upload-form__uploader.dragover{
+   //opacity: 0.6;
+   .upload-form__uploader__input-container__input{
+    //   opacity: 1;
+   }
+}
+//}
+.upload-form--step2{
+    width: 100%;
+    //border-bottom: 1px solid $lightlightgrey;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    .upload-form--step2__half-container, .upload-form--step2__half-container--left{
+        display: grid;
+        grid-template-columns: 1fr;
+        padding: 5%;
+        //grid-gap: 5%;
+        //margin-bottom: 2%;
+    }
+    .upload-form--step2__half-container--left{
+        border-right: 1px solid $lightgrey;
+    }
+    .upload-form--step2__label{
+        width: 50%;
+    }
+    .upload-form--step2__input{
+        width: 50%;
+    }
+    .upload-form--step2__select{
+        width: 40%;
+    }
+    .upload-form--step2__third-container{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-gap: 5%;
+    }
+}
+.upload-form--step3{
+    .upload-form--step3__dragable-container{
+        border-bottom: 1px solid $lightlightgrey;
+        margin-bottom: 20px;
+        .upload-form--step3__dragable-container__subheaders{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            padding-left: 5%;
+            margin-bottom: 1%;
+            .upload-form--step3__dragable-container__subheaders__label{
+                font-weight: bold;
+            }
+        }
+        .upload-form--step3__dragable-container__dragable{
+            width: 104.5%;
+            display: grid;
+            grid-template-columns: 0.1fr 1fr 1fr 0.1fr;
+            .upload-form--step3__dragable-container__dragable__handle{
+                cursor: grab;
+                margin-top: 30%;
+                margin-left: 30%;
+                width: 10px;
+                height: 10px;
+                border-radius: 10px;
+                margin-right: 5px;
+                //background-color: $lightlightgrey;
+                border: 1px solid $lightlightgrey;
+            }
+            .upload-form--step3__dragable-container__dragable__input{
+                border-radius: 4px;
+                height: 1.4rem;
+                box-shadow: inset 1px 1px $lightlightgrey;
+                margin-bottom: 0.5rem;//0.7rem;
+                padding: 1px 2px;
+                border: 1px solid $lightlightgrey;
+                background-color: white;
+                margin-right: 10%;
+                .upload-form--step3__dragable-container__dragable__input__select{
+                    background-color: transparent;
+                    border: none;
+                    width: 100%;
+                }
+            }
+            .upload-form--step3__dragable-container__dragable__button{
+                cursor: pointer;
+                margin-top: 10%;
+                margin-right: 30%;
+                width: 20px;
+                height: 20px;
+                border-radius: 10px;
+                //background-color: $lightlightgrey;
+                border: 1px solid $lightlightgrey
+            }
+        }
+        .upload-form--step3__dragable-container__button{
+            float: right;
+            background-color: white;
+            border-radius: 5px;
+        }
+    }
+}
+
+.upload-form--step4{
+    padding-left: 2.5%;
+    padding-right: 7%;
+    margin-bottom: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    .upload-form__uploader{
+        margin-left: 0%;
+        aspect-ratio: 1 /1;
+    }
+    .upload-form__uploader__input-container__input{
+        opacity: 1;
+    }
+    .upload-form__uploader__input-container__input:hover{
+        cursor: pointer;
+    }
+    .upload-form--step4__right{
+        border-left: 1px solid $lightgrey;
+        padding-left: 10%;
+        .upload-form--step4__description{
+            //grid-area: d;
+        }
+    }
+}
+.upload-form--step5{
+    padding: 0 2.5%;
+    .upload-form--step5__label{
+        font-weight: bold;
+
+        p{
+            margin: 0;
+            font-weight: normal;
+            display: inline;
+        }
+    }
+}
+.upload-form__bottom{
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    .upload-form__bottom__back--hidden{
+        visibility: hidden;
+    }
+    .upload-form__bottom__back{
+        margin-left: 6%;
+        visibility: visible;
+        background-color: transparent;
+        border: none;
+        //font-family: bold header;
+        font-weight: bold;
+        text-transform: uppercase;
+        transition: 0.1s ease-in-out;
+    } 
+    .upload-form__bottom__back:hover{
+        transform: scale(1.4);
+        cursor: pointer;
+    } 
+    .upload-form__bottom__error-text{
+        width: 45%;
+    }
+    .upload-form__bottom__next--hidden{
+        visibility: hidden;
+    }
+    .upload-form__bottom__next{
+        margin-right: 6%;
+        visibility: visible;
+        background-color: transparent;
+        border: none;
+        //font-family: bold header;
+        font-weight: bold;
+        text-transform: uppercase;
+        transition: 0.1s ease-in-out;
+    }
+    .upload-form__bottom__next:hover{
+        transform: scale(1.4);
+        cursor: pointer;
+    }
+}
+.upload-form__submit--hidden{
+    visibility: hidden;
+}
+.upload-form__submit{
+    visibility: visible;
+    border: none;
+    background-color: transparent;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: 0.1s ease-in-out;
+}
+.upload-form__submit:hover{
+    transform: scale(1.4);
+    cursor: pointer;
+}

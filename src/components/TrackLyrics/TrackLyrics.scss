@@ -1,0 +1,90 @@
+@use "../../sass/variables.scss" as *;
+
+.lyrics-container {
+    width: 100%;
+    .lyrics-container__description{
+        font-size: 0.9rem;
+        width: 45%;
+        .lyrics-container__description__link{
+            color: black;
+        }
+    }
+    .lyrics-container__editor{
+        display: flex;
+        position: relative;
+        border-bottom: 1px solid $lightgrey;
+        padding-bottom: 3%;
+        .lyrics-container__editor__list{
+            width: 50%;
+            margin-right: 5%;
+            .lyrics-container__editor__list__header-container, .lyrics-container__editor__list__item{
+                display: grid;
+                grid-template-columns: 1fr 1fr 0.5fr;
+                .lyrics-container__editor__list__header-container__header{
+                    text-transform: uppercase;
+                }
+            }
+            .lyrics-container__editor__list__item{
+                outline: none;
+                //box-shadow: inset 1px 1px $lightlightgrey;
+                box-shadow: 1px 2px 2px 0px $lightgrey;
+                margin-top: 2%;
+                margin-bottom: 0.5rem;//0.7rem;
+                padding: 0.2rem 0.5rem;
+                border: 1px solid $lightgrey;
+                background-color: white;
+                .lyrics-container__editor__list__item__end{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    .lyrics-container__editor__list__item__end__button{
+                        border: none;
+                        background-color: transparent;
+                        text-transform: uppercase;
+                    }
+                    .lyrics-container__editor__list__item__end__button--svg{
+                        border: none;
+                        background-color: transparent;
+                        padding-right: 0;
+                        transform: scale(0.5);
+                        //height: 0.9rem;
+                    }
+                    .lyrics-container__editor__list__item__end__button--svg:hover, .lyrics-container__editor__list__item__end__button:hover{
+                        cursor: pointer;
+                    }
+                }
+            }
+            .lyrics-container__editor__list__button{
+                border: none;
+                text-transform: uppercase;
+                background-color: transparent;
+                border-radius: 10px;
+                margin-left: 92%;
+            }
+        }
+        .lyrics-container__editor__text-editor{
+            width: 50%;
+            display: grid;
+            grid-gap: 2% 15%;
+            grid-template-areas: "typeh langh"
+            "type lang"
+            "t t"
+            "t t";
+            .lyrics-container__editor__text-editor__format-label{
+                grid-area: typeh;
+                text-transform: uppercase;
+            }
+            .lyrics-container__editor__text-editor__language-label{
+                grid-area: langh;
+                text-transform: uppercase;
+            }
+            .lyrics-container__editor__text-editor__input{
+                grid-area: t;
+                //width: 100%;
+                height: 200px;
+                border-radius: 5px;
+                text-align: start;
+            }
+        }
+    }
+}

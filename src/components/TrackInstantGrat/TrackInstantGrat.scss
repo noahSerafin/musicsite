@@ -1,0 +1,28 @@
+@use "../../sass/variables.scss" as *;
+
+.instant-grat{
+    margin: 1.5%;
+    //margin-right: 10%;
+    //margin-left: 10%;
+    .instant-grat__info{
+        padding: 1%;
+        background-color: $threetonered; //#f7a0a3;// #ff5b61;//  #d3898c;
+        border-radius: 15px;
+        border: 1px solid $threetonered;
+        box-shadow: 1px 1px 4px 2px $lightgrey;
+        color: white;
+        font-size: 0.89rem;
+    }
+    .instant-grat__dates{
+        margin-top: 20px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 10%;
+        padding-bottom: 30px;
+        border-bottom: 1px solid $lightgrey;
+        .instant-grat__dates__label{
+            margin-bottom: 5px;
+            text-transform: uppercase;
+        }
+    }
+}

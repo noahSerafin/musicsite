@@ -1,0 +1,35 @@
+@use "../../sass/variables.scss" as *;
+
+.my-tooltip{
+    text-transform: lowercase;
+    color: $darkgrey;
+    border-radius: 5px;
+    //width: 1em;
+    //height: 1em;
+    margin-left: 5px;
+    //padding-left: 3px;
+    //padding-right: 3px;
+    border: none;// 1px solid $lightgrey;
+    display: initial;
+    position: relative;
+    .my-tooltip__text{
+        visibility: hidden;
+        width: 160px;
+        padding: 5px;
+        font-size: 0.7rem;
+        background-color: $lightgrey;
+        color: white;
+        border-radius: 6px;
+        position: absolute;
+        top: 0;
+        left: 100%;
+        z-index: 99;
+    }
+}
+.my-tooltip:hover{
+    cursor: help;
+    .my-tooltip__text{
+
+        visibility: visible;
+    }
+}

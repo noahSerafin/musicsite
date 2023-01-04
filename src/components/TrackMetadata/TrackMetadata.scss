@@ -1,0 +1,20 @@
+@use "../../sass/variables.scss" as *;
+
+.track-editor__display{
+    .track-editor__display__header{
+        text-transform: uppercase;
+    }
+    .track-editor__display__grid{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 5%;
+    }
+    .track-editor__display__quad{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-gap: 5%;
+        margin-top: 5%;
+        padding-bottom: 50px;
+        border-bottom: 1px solid $lightgrey;
+    }
+}

@@ -1,0 +1,42 @@
+@use "../../sass/variables.scss" as *;
+
+.track-editor{
+    position: relative;
+    .track-editor__header__button{
+        float: right;
+        position: absolute;
+        top: 0;
+        right: 5%;
+        border: none;
+        text-transform: uppercase;
+        font-size: 1.0rem;
+        background-color: transparent;
+    }
+    .track-editor__header__button:hover{
+        cursor: pointer;
+    }
+    .track-editor__menu{
+        border-bottom: 1px solid $lightgrey;
+        .track-editor__menu__button{
+            //background-color: transparent;
+            border: none;
+            border-radius: 12px;
+                //font-weight: bold;
+            margin-right: 1.5rem;
+            height: 2.1rem;
+            padding: 0px 25px 0px 10px;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+        .track-editor__menu__button:hover{
+            cursor: pointer;
+        }
+    }
+    .metadata :nth-child(1), .lyrics :nth-child(2), .grat :nth-child(3), .media :nth-child(4){
+       background-color: $darkgrey;
+       color: white;
+    }
+    .track-editor__display{
+        width: 96%;
+    }
+}

@@ -1,0 +1,20 @@
+@use "../../sass/variables.scss" as *;
+
+.recharts-tooltip-wrapper {
+    color: black;
+    //color: $threetonered;
+    //.customTooltip {
+        
+     // p {
+       //margin:0;
+      //}
+    //}
+}
+.tooltip{
+  border-radius: 0.25rem;
+  background-color: $threetonered;
+  color: white;
+  padding: 1rem;
+  box-shadow: 15px 30px 40px 5px rgba(0, 0, 0, 0.5);
+  text-align: center;
+}

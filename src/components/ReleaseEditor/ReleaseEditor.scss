@@ -1,0 +1,117 @@
+@use "../../sass/variables.scss" as *;
+
+.release-editor{
+    //margin-top: 20px;
+    padding-bottom: 10%;///inside form?
+    border-radius: 15px;
+    background-color: white;
+    padding: 2.5%;
+    padding-top: 50px;
+    box-shadow: 2px 2px 2px 1px $lightgrey;
+    margin-bottom: 15%;
+    .release-editor__product-summary{
+        background-color: $lightlightgrey;
+        width: 99%;
+        display: flex;
+        position: relative;
+        border-radius: 5px;
+        box-shadow: 2px 2px 2px 1px $lightgrey;
+        .release-editor__product-summary__img{
+            //height: 80%;
+            width: 30%;
+            margin: 2.5%;
+            border-radius: 2px;
+        }
+        .release-editor__product-summary__info{
+            margin: 2.5%;
+            width: 30%;
+            .release-editor__product-summary__info__header{
+                margin: 0;
+                p{
+                    margin: 0;
+                }
+            }
+            .release-editor__product-summary__info__subheader{
+                font-weight: bold;
+                margin: 0.3rem;;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                p{
+                    margin: 0;
+                }
+            }
+            .release-editor__product-summary__info__info{
+                font-weight: bold;
+                p{
+                    display: inline;
+                    font-weight: normal;
+                }
+            }
+        }
+        .release-editor__product-summary__light-container{
+            float: right;
+            position: absolute;
+            right: 5%;
+            margin-top: 2.5%;
+            border-radius: 15px;
+            border: none;  
+            .release-editor__product-summary__light-container__text{
+                display: inline;
+                text-transform: uppercase;
+                font-size: 0.9rem;
+            }
+            .release-editor__product-summary__light-container__light{
+                margin: 0;
+                width: 100px;
+                font-size: 0.8rem;
+                border-radius: 10px;
+                height: 1.3rem;
+                text-align: right;
+                padding-right: 10px;
+                line-height: -1rem;
+                .release-editor__product-summary__light-container__light--green{
+                    width: 10px;
+                    background-color: lightgreen;
+                }
+                .release-editor__product-summary__light-container__light--red{
+                    background-color: $threetonered;
+                    width: 10px;
+                }
+            }
+        }
+    }
+    .release-editor__editor{
+
+        .release-editor__editor__menu{
+            margin: 30px 0;
+            border-bottom: 1px solid $lightgrey;
+            display: flex;
+            align-items: center;
+            height: 3rem;
+            .release-editor__editor__menu__button{
+                background-color: transparent;
+                border-radius: 12px;
+                border: none;
+                font-weight: bold;
+                font-size: 1.1rem;
+                margin-right: 1.5rem;
+                height: 2.1rem;
+                padding: 0px 30px 0px 20px;
+                margin-bottom: 30px;
+                text-transform: uppercase;
+            }
+            .release-editor__editor__menu__button:hover{
+                cursor: pointer;
+            }
+            
+        }
+        .Metadata :nth-child(1), .Tracks :nth-child(2), .Territories :nth-child(3), .Deliveries :nth-child(4){
+            color: white;
+            background-color: $darkgrey;
+        }
+        .release-editor__editor__form{
+            margin-top: 4%;
+        }
+    }
+}

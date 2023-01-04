@@ -1,0 +1,73 @@
+@use "../../sass/variables.scss" as *;
+
+.tracklist{
+    .tracklist__header{
+        border-bottom: 1px solid $lightlightgrey;
+        p{
+            font-size: 0.8rem;
+        }
+    }
+    .tracklist__top, .tracklist__tracklist__track{
+        display: grid;
+        grid-template-columns: 0.5fr 2fr 1fr 2fr 2fr 2fr 2fr 3fr;
+        //border-bottom: 2px solid $lightgrey;
+    }
+    .tracklist__top__header{
+        border-bottom: 1px solid $lightgrey;
+        font-size: 0.9rem;
+        text-transform: uppercase;
+        padding-right: 10px;
+    }
+    .tracklist__top__header--end, .tracklist__tracklist__track--end{
+        border: none;
+    }
+    .tracklist__tracklist{
+        .tracklist__tracklist__track{
+            p{
+                margin: 0;
+                padding-right: 10px;
+                padding-left: 5px;
+                //border-bottom: 1px solid $lightgrey;
+            }
+        }
+        .tracklist__tracklist__track__button{
+            position: relative;
+            background-color: transparent;
+            border: none;
+            .tracklist__tracklist__track__button__icon{
+                color: $darkgrey;
+                height: 40%;
+            }
+            .tracklist__tracklist__track__button__icon:hover{
+                cursor: pointer;
+            }
+        }
+        .tracklist__tracklist__track__button__button-bank--hidden{//sort out useState per mapped result
+            //visibility: hidden;
+            //display: none;
+        }
+        .tracklist__tracklist__track__button__button-bank, .tracklist__tracklist__track__button__button-bank--hidden{
+            display: block;
+            visibility: visible;
+           //position: absolute;
+            //z-index: 98;
+            display: flex;
+            //flex-direction: column;
+            justify-content: space-between;
+            border-radius: 5px;
+            background-color: $offwhite;
+            //border: 1px solid $lightgrey;
+            .tracklist__tracklist__track__button__button-bank__button{
+                background-color: transparent;
+                border: none;
+                padding: 5px;
+                //padding-left: 15px;
+                //padding-right: 15px;
+                text-transform: uppercase;
+            }
+            .tracklist__tracklist__track__button__button-bank__button:hover{
+                cursor: pointer;
+            }
+        }
+    }
+}

@@ -1,0 +1,41 @@
+@use "../../sass/variables.scss" as *;
+
+.track-media{
+    p{
+        width: 60%;
+    }
+    width: 95%;
+    padding-left: 2.5%;
+    .track-media__options{
+        position: absolute;
+        right: 5%;
+        display: flex;
+        justify-content: space-between;
+        width: 40;
+        .track-media__options__button{
+            font-size: 0.7rem;
+            border: none;
+            text-transform: uppercase;
+            background-color: transparent;
+        }
+        .track-media__options__button:hover{
+            cursor: pointer;
+        }
+    }
+    .track-media__grid{
+        margin-top: 40px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        .track-media__grid__header{
+            text-align: center;
+            text-transform: uppercase;
+            font-family: "Arial";
+            font-weight: normal;
+            border-bottom: 1px solid $lightgrey;
+            padding-bottom: 20px;
+        }
+        .track-media__grid__item{
+            border-bottom: 1px solid $lightlightgrey;
+        }
+    }
+}

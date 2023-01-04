@@ -1,0 +1,20 @@
+@use "../../sass/variables.scss" as *;
+
+.deliveries{
+    width: 95%;
+    padding-left: 2.5%;
+    .deliveries__header{
+        text-transform: uppercase;
+    }
+    .deliveries__grid{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        .deliveries__grid__header{
+            border-bottom: 2px solid $lightgrey;
+            text-transform: uppercase;
+        }
+        .deliveries__grid__item{
+            border-bottom: 1px solid $lightlightgrey;
+        }
+    }
+}

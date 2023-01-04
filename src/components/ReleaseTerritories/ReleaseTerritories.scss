@@ -1,0 +1,31 @@
+@use "../../sass/variables.scss" as *;
+
+.territories__header{
+    text-transform: uppercase;
+}
+.release-territories{
+    border: none;
+    display: grid;
+    grid-template-columns: 0.1fr 1fr;
+    margin-left: 0;
+    padding-left: 0;
+    grid-gap: 15px 0%;
+    padding-bottom: 30px;
+    border-bottom: 1px solid $lightgrey;
+    input{
+        outline: none;
+    }
+}
+.no-border{
+    border: none;
+}
+.release-territories-select{
+    visibility: visible;
+    display: block;
+}
+.p--inline{
+    display: inline;
+}
+//.release-territories__territories{
+    
+//}
