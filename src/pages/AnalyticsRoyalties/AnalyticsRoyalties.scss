@@ -1,0 +1,139 @@
+@use "../../sass/variables.scss" as *;
+
+.analytics-royalties-container{
+    //width: 100%;
+    height: 100%;
+    padding-left: 2.5%;
+    padding-right: 2.5%;
+    @include xs{
+        width: 96vw;
+        position: fixed;
+        margin-bottom: 15vh;
+        top: 0;
+    }
+    .analytics-royalties-container__header-container{
+        border-bottom: 1px solid $darkgrey;
+        display: grid;
+        grid-template-columns: 1fr 3fr;
+        @include xs{
+            grid-template-columns: 1fr;
+        }
+        .analytics-royalties-container__header-container__header{
+            text-transform: uppercase;
+            margin: 20px;
+            margin-left: 0;
+            font-size: 2rem;
+            font-weight: bold;
+        }
+        .analytics-royalties-container__data__filters{
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+            align-items: flex-end;//center;
+            margin-bottom: 10px;
+            @include xs{
+
+                margin-bottom: 0;
+            }
+            .analytics-royalties-container__data__filters__filter{
+                background-color: transparent;
+                color: gray;
+                border-radius: 5px;
+                padding: 10px 10px;
+                padding-right: 10px;
+                height: 60%;
+                width: 22%;
+                font-size: 17px;
+                @include xs{
+                    padding: 0;
+                    margin: 10px 1px;
+                }
+            }
+        }
+    }
+    .analytics-royalties-container__data{
+        display: block;
+        overflow-y: scroll;
+        //padding-bottom: 200px;
+        height: 80%;
+        //padding-left: 5%;
+        //padding-right: 2.5%;
+        overflow-x: hidden;
+        @include xs{
+            overflow-x: hidden;
+        }
+        .analytics-royalties-container__data__header{
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            .analytics-royalties-container__data__header__h{
+                //border-bottom: 1px solid black;
+                margin: 20px;
+                font-size: 1.4rem;
+                font-weight: bold;
+                margin-right: 0px;
+                @include xs{
+                    margin-left: 0;
+                }
+            }
+        }
+        .analytics-royalties-container__data__overview{
+            height: 300px;
+            display: grid;
+            grid-template-areas: "g g g g g y"
+            //"g g g g g ."
+            "g g g g g t";
+            .analytics-royalties-container__data__overview__graph{
+                grid-area: g;
+                //border: 1px dotted $threetonered;
+            }
+            .analytics-royalties-container__data__overview__ytd{
+                grid-area: y;
+                border-radius: 15px;
+                border: 1px solid $lightgrey;
+                padding-left: 5%;
+                margin: 2%;
+            }
+            .analytics-royalties-container__data__overview__total{
+                grid-area: t;
+                border-radius: 15px;
+                border: 1px solid $lightgrey;
+                padding-left: 5%;
+                margin: 2%;
+            }
+        }
+        .analytics-royalties-container__data__filters{
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+            .analytics-royalties-container__data__filters__filter{
+                background-color: transparent;
+                color: gray;
+                border-radius: 5px;
+                padding: 10px 10px;
+                padding-right: 10px;
+            }
+        }
+        .analytics-royalties-container__data__breakdowns__list{
+            height: 20%;//300px;
+            //border: 1px dotted $threetonered;
+        }
+        .analytics-royalties-container__data__breakdowns__graph{
+            height: 300px;
+            //border: 1px dotted $threetonered;
+        }
+        .analytics-royalties-container__data__breakdowns__graph--pie{
+            height: 300px;
+            @include xs{
+                height: 600px;
+            }
+        }
+    }
+   
+    @include xs{
+        margin-bottom: 10vh;
+    }
+}
+.analytics-royalties-container--restricted{
+    padding-left: 0;
+}

@@ -1,0 +1,46 @@
+@use "../../sass/variables.scss" as *;
+.account-support{
+    padding-left: 2.5%;
+    padding-right: 2.5%;
+    .account-support__header{
+        padding-bottom: 20px;
+        border-bottom: 1px solid $lightgrey;
+    }
+    .account-support__halver{
+        height: 500px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 5% 5%;
+        margin-right: 10%;
+        .account-support__halver__left{
+            position: relative;
+            display: grid;
+            grid-template-rows: 0.1fr 1fr;
+            .account-support__halver__left__email{
+                font-size: 1.1rem;
+                margin-bottom: 2%;
+            }
+            .account-support__halver__left__msg:focus, .account-support__halver__left__email:focus{
+                outline: 2px solid $threetonered;
+            }
+            .account-support__halver__left__button{
+               position: absolute;
+               bottom: 1%;
+               right: 1%;
+               text-transform: uppercase;
+               background-color: transparent;
+               font-family: "Basement";
+               border: none;//1px solid $lightgrey;
+            }
+            .account-support__halver__left__button:hover{
+                cursor: pointer;
+                color: $threetonered;
+            }
+        }
+        .account-support__halver__right{
+            p{
+                margin-top: 0;
+            }
+        }
+    }
+}

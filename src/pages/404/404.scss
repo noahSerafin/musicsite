@@ -1,0 +1,20 @@
+.page-not-found{
+    text-align: center;
+    background-color: black;
+    color: white;
+    height: 85vh;
+    overflow-y: hidden;
+    h1{
+        margin-top: 0;
+        padding-top: 100px;
+        padding-bottom: 50px;
+    }
+    a{
+        color: white;
+        text-transform: uppercase;
+        text-decoration: none;
+    }
+    a:hover{
+        cursor: pointer;
+    }
+}

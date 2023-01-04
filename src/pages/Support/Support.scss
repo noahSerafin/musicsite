@@ -1,0 +1,52 @@
+@use "../../sass/variables.scss" as *;
+
+.support{
+    padding-top: 3%;
+    background-color: black;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    color: white;
+    .support__form{
+        
+        height: 500px;
+        width: 50%;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content:space-around;
+        align-items: center;
+        border: 2px solid white;
+        border-radius: 15px;
+        padding: 5%;
+        padding-top: 2%;
+        padding-bottom: 2%;
+        .support__form__input{
+            margin-bottom: 10px;
+            border-radius: 5px;
+            width: 70%
+        }
+        .support__form__message{
+            height: 100px;
+            width: 70%;
+            border-radius: 5px;
+        }
+        .support__form__submit{
+            font-weight: bold;
+            font-size: 1.5rem;
+            margin-top: 20px;
+            width: 20%;
+            border: 2px solid white;
+            background-color: transparent;
+            border-radius: 5px;
+            color: white;
+        }
+        .support__form__submit:hover{
+            color: $threetonered;
+            //background-color: white;
+            border: 2px solid $threetonered;
+            cursor: pointer;
+        }
+    }
+}

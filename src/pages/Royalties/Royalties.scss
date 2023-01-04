@@ -1,0 +1,77 @@
+@use "../../sass/variables.scss" as *;
+
+.royalties-container{
+    width: 95%;
+    .royalties-container__totals{
+        display: grid;//flex;
+        //justify-content: space-between;
+        padding-top: 10%;
+        grid-template-columns: 2fr 1fr;
+        grid-gap: 0% 5%;
+        .royalties-container__totals__table{
+            //width: 60%;
+            
+            .royalties-container__totals__table__headers, .royalties-container__totals__table__grid__row{
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                margin-left: 5%;
+            }
+            .royalties-container__totals__table__headers__header{
+                margin-top: 0;
+            }
+            .royalties-container__totals__table__grid{
+                overflow-y: scroll;
+                height: 500px;
+                border-radius: 15px;
+                background-color: $offwhite;
+                box-shadow: 1px 1px 2px 2px $lightgrey;
+                .royalties-container__totals__table__grid__row{
+
+                }
+            }
+        }
+        .royalties-container__totals__total-container{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            .royalties-container__totals__total-container__total{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                border-radius: 15px;
+                background-color: $white;
+                box-shadow: 1px 1px 2px 2px $lightgrey;
+                padding: 0 5% 5% 5%;
+                height: 250px;
+                font-weight: bold;
+                //width: 24%;
+            }
+            .royalties-container__totals__total-container__text{
+                //width: 24%;
+                font-size: 0.8rem;
+            }
+        }
+        .royalties-container__totals__total-container__request{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            margin-right: 4.5%;
+            .royalties-container__totals__total-container__request__button{
+                border: 1px solid $lightgrey;
+                border-radius: 0;
+                background-color: transparent;
+                text-transform: uppercase;
+                font-size: 1.2rem;
+                margin-right: 1%;
+                padding: 7px 25px;
+            }
+            .royalties-container__totals__total-container__request__button:hover{
+                cursor: pointer;
+                color: $threetonered;
+                border: 1px solid $threetonered;
+            }
+        }
+    }
+    
+}

@@ -1,0 +1,167 @@
+@-webkit-keyframes topdown {
+    from {clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);}
+  
+    to {clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+      visibility: visible;}
+  }
+  
+  @-moz-keyframes topdown {
+    from {clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);}
+  
+    to {clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+      visibility: visible;}
+  }
+  
+  @keyframes topdown {
+    from {clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);}
+  
+    to {clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+      visibility: visible;}
+  }
+  
+  @-webkit-keyframes bottomup {
+    from {clip-path: polygon(100% 100%, 100% 100%, 0 100%, 0 100);}
+  
+    to {clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+      visibility: visible;}
+  }
+  
+  @-moz-keyframes bottomup {
+    from {clip-path: polygon(100% 100%, 100% 100%, 0 100%, 0 100);}
+  
+    to {clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+      visibility: visible;}
+  }
+  
+  @keyframes bottomup {
+    from {clip-path: polygon(100% 100%, 100% 100%, 0 100%, 0 100);}
+  
+    to {clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+      visibility: visible;}
+  }
+  
+  
+  @-webkit-keyframes left-to-right {
+    from {clip-path: polygon(0 0, 0 0, 0 100% , 0 100%);
+      visibility: visible;}
+    to {clip-path: polygon(0 0, 100% 0, 100% 100% , 0 100%);
+      visibility: visible;}
+  }
+  
+  @-moz-keyframes left-to-right {
+    from {clip-path: polygon(0 0, 0 0, 0 100% , 0 100%);
+      visibility: visible;}
+    to {clip-path: polygon(0 0, 100% 0, 100% 100% , 0 100%);
+      visibility: visible;}
+  }
+  
+  @keyframes left-to-right {
+    from {clip-path: polygon(0 0, 0 0, 0 100% , 0 100%);
+      visibility: visible;}
+    to {clip-path: polygon(0 0, 100% 0, 100% 100% , 0 100%);
+      visibility: visible;}
+  }
+  
+  @-webkit-keyframes expand-from-middle {
+    from {clip-path: polygon(50% 100%, 50% 0, 50% 0, 50% 100%);}
+    to {clip-path: polygon(0 0, 100% 0, 100% 100% , 0 100%);
+    visibility: visible;}
+  }
+  
+  @-moz-keyframes expand-from-middle {
+    from {clip-path: polygon(50% 100%, 50% 0, 50% 0, 50% 100%);}
+    to {clip-path: polygon(0 0, 100% 0, 100% 100% , 0 100%);
+      visibility: visible;}
+  }
+  
+  @keyframes expand-from-middle {
+    from {clip-path: polygon(50% 100%, 50% 0, 50% 0, 50% 100%);}
+    to {clip-path: polygon(0 0, 100% 0, 100% 100% , 0 100%);
+      visibility: visible;}
+  }
+  
+  @-webkit-keyframes diagonal {
+    0% {clip-path: polygon(0 0, 100% 0, 0 0, 0 100%);}
+    50% {clip-path: polygon(0 0, 100% 0, 100% 0, 0 100%);
+    visibility: visible;}
+    100% {clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);}
+  }
+  
+  @-moz-keyframes diagonal {
+    0% {clip-path: polygon(0 0, 100% 0, 0 0, 0 100%);}
+    50% {clip-path: polygon(0 0, 100% 0, 100% 0, 0 100%);
+    visibility: visible;}
+    100% {clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);}
+  }
+  
+  @keyframes diagonal {
+    0% {clip-path: polygon(0 0, 100% 0, 0 0, 0 100%);}
+    50% {clip-path: polygon(0 0, 100% 0, 100% 0, 0 100%);
+    visibility: visible;}
+    100% {clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);}
+  }
+  
+  @-moz-keyframes fadeInSlide {
+    0% {opacity:0; transform: translateY(-6px);}
+    85%{transform: translateY(0);}
+    100% {opacity:1;
+    visibility: visible;}
+  }
+  
+  @-webkit-keyframes fadeInSlide {
+    0% {opacity:0; transform: translateY(-6px);}
+    85%{transform: translateY(0);}
+    100% {opacity:1;
+    visibility: visible;}
+  }
+  
+  @keyframes fadeInSlide {
+    0% {opacity:0; transform: translateY(-6px);}
+    85%{transform: translateY(0);}
+    100% {opacity:1;
+    visibility: visible;}
+  }
+  
+  @-webkit-keyframes spinFadeIn {
+    0% {opacity:0; transform: rotateZ(1deg) scale(0.1);}
+    100% {opacity:1; transform: rotateZ(360deg) scale(1);
+    visibility: visible;}
+  }
+  
+  @-moz-keyframes spinfFadeIn {
+    0% {opacity:0; transform: rotateZ(1deg) scale(0.1);}
+    100% {opacity:1; transform: rotateZ(360deg) scale(1);
+    visibility: visible;}
+  }
+  
+  @keyframes spinFadeIn {
+    0% {opacity:0; transform: rotateZ(1deg) scale(0.1);}
+    100% {opacity:1; transform: rotateZ(360deg) scale(1);
+    visibility: visible;}
+  }
+  
+  @-webkit-keyframes growImg {
+    0% {transform: scale(0.35);}
+    100% {transform: scale(0.6);}
+  }
+  
+  @-moz-keyframes sgrowImg {
+    0% {transform: scale(0.35);}
+    100% {transform: scale(0.6);}
+  }
+  
+  @keyframes growImg {
+    0% {transform: scale(0.35);}
+    100% {transform: scale(0.6);}
+  }
+  //before
+  [data-aos="my-fade"] {
+    transform: scale(0.5);
+    opacity: 0;
+    transition-property: transform, opacity;
+  }
+  /* After animation */
+  [data-aos="my-fade"].aos-animate {
+    transform: scale(1.5);
+    opacity: 1;
+  }

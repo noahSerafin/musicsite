@@ -1,0 +1,30 @@
+@use "../../sass/variables.scss" as *;
+
+.legal{
+    height: 100vh;
+    background-color: black;
+    padding-top: 70px;
+    .legal__header{
+        text-align: center;
+        font-size: 2.5rem;
+        text-transform: uppercase;
+        font-family: 'Futura Bold';
+        text-align: center;
+        color: white;
+    }
+    .legal__container{
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        .legal__container__content{
+            margin-top: 30px;
+            text-align: center;
+            width: 100%;
+            height: 100%;
+            color: white;
+            width: 75%;
+            border: 1px dotted white;
+        }
+    }
+}

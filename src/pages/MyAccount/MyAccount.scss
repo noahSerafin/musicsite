@@ -1,0 +1,235 @@
+@use "../../sass/variables.scss" as *;
+.header--hidden{
+    display: none;
+    visibility: hidden;
+}
+.my-account{
+    background-color: black;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    overflow-y: hidden;
+}
+
+.my-account__container__top{
+    width: 85%;
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    z-index: 1;//-1;
+    //float: right;
+    top: 0px;
+    right: 0;
+    height: 50px;
+    //box-shadow: 0px 2px 1px 1px black;
+    //width: 80%;
+    .my-account__container__top__header{
+        margin-left: 5%;
+        margin-top: 10px;
+        font-weight: bold;
+    }
+    .my-account__container__top__options{
+        margin-right: 2%;
+        width: 30%;
+        font-weight: bold;
+        display: flex;
+        justify-content: flex-end;//space-between;
+        align-items: center;
+        .my-account__container__top__options__nav, .my-account__container__top__options__nav--settings{
+            font-family: "Arial";
+            margin-right: 10px;
+            background-color:transparent;
+            color: $darkgrey;
+            border: none;
+            border-radius: 5px;
+            padding: 5px;
+            margin: 0;
+            font-weight: bold;
+            //box-shadow: none;
+            //border: none;
+            //box-shadow: rgb(255, 255, 255) 5px 11px 0px -1px;//rgb(0, 0, 0) 5px 11px 0px -2px,
+        }
+
+        .my-account__container__top__options__nav--user{
+            height: 30px;
+            width: 30px;
+            background-color: transparent;
+            border-radius: 5px;
+            border: none;
+            position: relative;
+            .my-account__container__top__options__nav--user__icon{
+                height: 1.7em;
+                width: 1.7em;
+                position: absolute;
+                bottom: 0px;
+                right: 5%;
+                //z-index: -1;
+            }
+            .my-account__container__top__options__nav__icon{
+                position: absolute;
+                height: 45px;
+                top: 1.125em;
+            } 
+            .my-account__container__top__options__nav__drop-down{
+                position: absolute;
+                visibility: hidden;
+                .my-account__container__top__options__nav__drop-down__nav{
+                    
+                }
+            }
+        }
+        .my-account__container__top__options__nav--settings{
+            transform: scale(0.7);
+        }
+        .true{
+            background-color: $darkgrey;
+        }
+        //:nth-child(2){
+         //   text-transform: uppercase;
+        //    background-color: $threetonered;
+        //}
+        .my-account__container__top__options__nav--user:hover,  .my-account__container__top__options__nav--settings:hover{
+            cursor: pointer;
+        }
+        .my-account__container__top__options__nav:hover{
+            cursor: pointer;
+        }
+    }
+}
+
+.my-account__container{
+    position: relative;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    //outline: 2px solid white;
+    //box-shadow: 0 0 0 2px white;
+    background-color: $offwhite;//aliceblue;
+    z-index: 1;
+    display: flex;
+    .my-account__container__left{
+        width: 12%;
+        //border-right: 2px solid white;
+        background-color: #262626;
+        display: grid;
+        //flex-direction: column;
+        //justify-content: space-between;
+        z-index: 2;//
+        position: relative;
+        .my-account__container__left__logo__home-link{
+            width: 80%;
+            height: 10%;
+            padding-left: 10%;
+            padding-top: 12%;
+            .logo{
+                width: 36%;
+                margin-left: 32%;
+                object-fit: contain;
+            }
+        }
+        .my-account__container__left__nav{
+            width: 60%;
+            height: 40%;
+            margin-left: 20%;
+            color: white;
+            background-color: transparent;
+            border: none;
+            //border-bottom: 2px solid white;
+            border-radius: 25px;
+            font-family: "Arial";
+            //text-transform: uppercase;
+            font-weight: bold;
+            letter-spacing: 0px;
+            text-align: center;
+            position: relative;
+            //Link styles
+            padding-top: 10%;
+            padding-bottom: 10%;
+            text-decoration: none;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            .my-account__container__left__nav__icon{
+                //position: relative;
+                width: 1.5em;
+                height: 1.5em;
+                display: inline-block;
+                color: white;
+                //width: 80%;
+                height: 35px;
+                padding: 0%;
+                margin: 0;
+                margin-bottom: 5%;
+                path{
+                    stroke: white;
+                }
+            }
+        }
+        .last{
+            border: none;
+        }
+        .active, .my-account__container__left__nav:hover{
+            color: $threetonered;
+            cursor: pointer;
+            .my-account__container__left__nav__icon{
+                path{
+                    color: $threetonered;
+                }
+            }
+        }
+        .my-account__container__left__nav--hidden{
+            visibility: hidden;
+        }
+    }
+    .my-account__container__right{
+        color: black;
+        width: 90%;
+        position: relative;
+        top: 50px;
+    }
+    .acc-support{
+        :nth-child(7){
+            background-color: #5c5c5c;
+            //color: $threetonered;
+        }
+    }
+    .details{
+        :nth-child(7){
+            background-color: #5c5c5c;
+            //color: $threetonered;
+        }
+    }
+    .music{
+        :nth-child(2){
+            background-color: #5c5c5c;
+            //color: $threetonered;
+        }
+    }
+    .analytics{
+        :nth-child(3){
+            background-color: #5c5c5c;
+            //color: $threetonered;
+        }
+    }
+    .royalties{
+        :nth-child(4){
+            background-color: #5c5c5c;
+            //color: $threetonered;
+        }
+    }
+    .add-ons{
+        :nth-child(5){
+            background-color: #5c5c5c;
+            //color: $threetonered;
+        }
+    }
+    .amplify{
+        :nth-child(5){
+            background-color: #5c5c5c;
+            //color: $threetonered;
+        }
+    }
+}
+

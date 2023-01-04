@@ -1,0 +1,64 @@
+@use "../../sass/variables.scss" as *;
+
+.account-settings{
+    margin-left: 5%;
+    
+    .account-settings__header{
+        text-transform: uppercase;
+    }
+    .account-settings__body{
+        display: flex;
+        justify-content: space-between;
+        width: 85%;
+        .account-settings__body__input-container{
+            display: flex;
+            flex-direction: column;
+            width: 47%;
+            .account-settings__body__input-container__header{
+                text-transform: uppercase;
+                margin: 0;
+                margin-bottom: 3%;
+            }
+            .account-settings__body__input-container__input{
+                border: 1px solid;
+                margin-bottom: 3%;
+                //height: 1.5rem;
+                font-size: 0.9rem;
+                padding-top: 2.1%;
+                padding-bottom: 2.1%;
+                outline: none;
+                color: $darkgrey;
+                border: 1px solid $darkgrey;
+            }
+            .account-settings__body__input-container__button{
+                border-radius: 0;
+                box-shadow: none;
+                border: 1px solid gray;
+                padding-top: 1.5%;
+                padding-bottom: 1.5%;
+                background-color: $lightlightgrey;
+                text-transform: uppercase;
+                //height: 1.5rem;
+                margin-bottom: 3%;
+                font-weight: bold;
+                font-size: 1.0rem;
+            }
+            .account-settings__body__input-container__button:hover{
+                color: $threetonered;
+                cursor: pointer;
+            }
+            .account-settings__body__input-container__button--cancel{
+                margin-top: 2%;
+                border: none;
+                background-color: transparent;
+                font-size: 0.8rem;
+                text-align: left;
+                text-decoration: underline;
+            }
+            .account-settings__body__input-container__button--cancel:hover{
+                cursor: pointer;
+            }
+        }
+    }
+    
+}

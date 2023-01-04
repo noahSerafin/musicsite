@@ -1,0 +1,112 @@
+@use "../../sass/variables.scss" as *;
+
+.checkout{
+    padding-top: 10%;
+    background-color: black;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding-bottom: 10%;
+    .checkout__form{
+        color: white;
+       //height: 500px;
+        width: 50%;
+        //text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        border: 2px solid white;
+        border-radius: 15px;
+        padding: 5%;
+        @include sm{
+            width: 70%;
+            height: 100%;
+        }
+        @include xs{
+            width: 80%;
+            height: 100%;
+        }
+        .checkout__form__input{
+            height: 27px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            width: 70%
+        }
+        .checkout__form__billing-half{
+            width: 73%;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            @include xs{
+                grid-template-columns: 1fr;
+            }
+            //grid-template-rows: 1fr 1fr;
+            .checkout__form__billing-half__input{
+                height: 27px;
+                margin: 5px;
+                position: relative;
+                //width: 50%;
+                border-radius: 5px;
+            }
+        }
+        .checkout__form__order{
+            width: 70%;
+            display: grid;
+            grid-template-areas: "h h" "l1 i1" "l2 i2";
+            @include xs{
+                width: 90%;
+                display: block;
+            }
+            .checkout__form__order__header{
+                grid-area: h;
+            }
+            label{
+                margin-left: 10px;
+                padding-bottom: 10px;
+            }
+            .checkout__form__order__info{
+                float: right;
+                padding-left: 10px;
+                width: 50%;
+            }
+        }
+        .checkout__form__card-header{
+            margin-bottom: 5px;
+        }
+        .checkout__form__card{
+            width: 30%;
+            border: 1px dotted white;
+            display: grid;
+            padding: 5px;
+            border-radius: 5px;
+            margin: 5px;
+            grid-template-areas: "n n"
+            "d c";
+            .checkout__form__card__number{
+                grid-area: n;
+            }
+            .checkout__form__card__expiry{
+                width: 90%;
+                grid-area: d;
+            }
+            .checkout__form__card__CVV{
+                position: inherit;
+                right: 0;
+                width: 50%;
+                grid-area: c;
+            }
+        }
+        .checkout__form__checkout{
+            margin-top: 20px;
+            width: 70px;
+            text-align: center;
+            background-color: white;
+            font-family: "Futura Bold";
+            border: 2px solid $threetonered;
+            border-radius: 5px;
+            padding: 10px 10px;
+            padding-right: 70px;
+        }
+    }
+}

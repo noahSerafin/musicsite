@@ -1,0 +1,285 @@
+// Colors
+$lightlightgrey: #F9F9F9;// #dddddd;
+$lightgrey: #898989;// #dddddd;
+$popgrey: #F5F2F2;
+$darkgrey: #262626;// #393939;
+//$darkgrey: #262626;
+$black: #1d1c1b;
+$greywhite: #f2f2f2;
+$offwhite: #F7F7F7;//#f2f2f2;
+$white: #fff;
+$threetonered: #d62329;
+$orange: #ee9e50;
+//Fonts
+$font-light: 300;
+$font-regular: 400;
+$font-medium: 500;
+$font-bold: 700;
+
+// Media Breakpoints
+$screen-xs: 480px; //mobile
+$screen-sm: 768px; //ipad
+$screen-md: 991px; //sm desktop
+$screen-lg: 1200px; //lg desktop
+$screen-lm: 1600px; //lg md desktop
+$screen-xl: 2072px; //xl deskt
+
+@font-face {
+  font-family: "Futura Bold";
+  src: url("fonts/Futura-Bold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Futura Light Italic";
+  src: url("fonts/Futura-Light-Italic.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Futura Medium Italic";
+  src: url("fonts/Futura Medium Italic.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Monument Extended";
+  src: url("fonts/PPMonumentExtended-Regular.otf") format("truetype");
+}
+@font-face {
+  font-family: "Basement";
+  src: url("fonts/BasementGrotesque-Black_v1.202.otf") format("truetype");
+}
+h1, h2, h3, h4, h5, h6{
+  font-family: "Basement";
+}
+
+@mixin sitefont {
+    font-family: "Futura Bold", sans-serif;
+}
+
+@mixin xs {
+    @media screen and (max-width: $screen-xs) {
+      @content;
+    }
+  }
+  
+  @mixin sm {
+    @media screen and (max-width: $screen-sm) {
+      @content;
+    }
+  }
+  
+  // Medium devices
+  @mixin md {
+    @media screen and (max-width: $screen-md) {
+      @content;
+    }
+  }
+  
+  // Large devices
+  @mixin lg {
+    @media screen and (max-width: $screen-lg) {
+      @content;
+    }
+  }
+  
+  //medium large devices
+  @mixin lm {
+    @media screen and (max-width: $screen-lm) {
+      @content;
+    }
+  }
+  
+  // Extra large devices
+  @mixin xl {
+    @media screen and (max-width: $screen-xl) {
+      @content;
+    }
+  }
+
+//animations
+  @-webkit-keyframes topdown {
+    from {clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);}
+  
+    to {clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+      visibility: visible;}
+  }
+  
+  @-moz-keyframes topdown {
+    from {clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);}
+  
+    to {clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+      visibility: visible;}
+  }
+  
+  @keyframes topdown {
+    from {clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);}
+  
+    to {clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+      visibility: visible;}
+  }
+  
+  @-webkit-keyframes bottomup {
+    from {clip-path: polygon(100% 100%, 100% 100%, 0 100%, 0 100);}
+  
+    to {clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+      visibility: visible;}
+  }
+  
+  @-moz-keyframes bottomup {
+    from {clip-path: polygon(100% 100%, 100% 100%, 0 100%, 0 100);}
+  
+    to {clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+      visibility: visible;}
+  }
+  
+  @keyframes bottomup {
+    from {clip-path: polygon(100% 100%, 100% 100%, 0 100%, 0 100);}
+  
+    to {clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+      visibility: visible;}
+  }
+  
+  
+  @-webkit-keyframes left-to-right {
+    from {clip-path: polygon(0 0, 0 0, 0 100% , 0 100%);
+      visibility: visible;}
+    to {clip-path: polygon(0 0, 100% 0, 100% 100% , 0 100%);
+      visibility: visible;}
+  }
+  
+  @-moz-keyframes left-to-right {
+    from {clip-path: polygon(0 0, 0 0, 0 100% , 0 100%);
+      visibility: visible;}
+    to {clip-path: polygon(0 0, 100% 0, 100% 100% , 0 100%);
+      visibility: visible;}
+  }
+  
+  @keyframes left-to-right {
+    from {clip-path: polygon(0 0, 0 0, 0 100% , 0 100%);
+      visibility: visible;}
+    to {clip-path: polygon(0 0, 100% 0, 100% 100% , 0 100%);
+      visibility: visible;}
+  }
+  
+  @-webkit-keyframes expand-from-middle {
+    from {clip-path: polygon(50% 100%, 50% 0, 50% 0, 50% 100%);}
+    to {clip-path: polygon(0 0, 100% 0, 100% 100% , 0 100%);
+    visibility: visible;}
+  }
+  
+  @-moz-keyframes expand-from-middle {
+    from {clip-path: polygon(50% 100%, 50% 0, 50% 0, 50% 100%);}
+    to {clip-path: polygon(0 0, 100% 0, 100% 100% , 0 100%);
+      visibility: visible;}
+  }
+  
+  @keyframes expand-from-middle {
+    from {clip-path: polygon(50% 100%, 50% 0, 50% 0, 50% 100%);}
+    to {clip-path: polygon(0 0, 100% 0, 100% 100% , 0 100%);
+      visibility: visible;}
+  }
+  
+  @-webkit-keyframes diagonal {
+    0% {clip-path: polygon(0 0, 100% 0, 0 0, 0 100%);}
+    50% {clip-path: polygon(0 0, 100% 0, 100% 0, 0 100%);
+    visibility: visible;}
+    100% {clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);}
+  }
+  
+  @-moz-keyframes diagonal {
+    0% {clip-path: polygon(0 0, 100% 0, 0 0, 0 100%);}
+    50% {clip-path: polygon(0 0, 100% 0, 100% 0, 0 100%);
+    visibility: visible;}
+    100% {clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);}
+  }
+  
+  @keyframes diagonal {
+    0% {clip-path: polygon(0 0, 100% 0, 0 0, 0 100%);}
+    50% {clip-path: polygon(0 0, 100% 0, 100% 0, 0 100%);
+    visibility: visible;}
+    100% {clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);}
+  }
+  
+  @-moz-keyframes fadeInSlide {
+    0% {opacity:0; transform: translateY(-6px);}
+    85%{transform: translateY(0);}
+    100% {opacity:1;
+    visibility: visible;}
+  }
+  
+  @-webkit-keyframes fadeInSlide {
+    0% {opacity:0; transform: translateY(-6px);}
+    85%{transform: translateY(0);}
+    100% {opacity:1;
+    visibility: visible;}
+  }
+  
+  @keyframes fadeInSlide {
+    0% {opacity:0; transform: translateY(-6px);}
+    85%{transform: translateY(0);}
+    100% {opacity:1;
+    visibility: visible;}
+  }
+  
+  @-webkit-keyframes spinFadeIn {
+    0% {opacity:0; transform: rotateZ(1deg) scale(0.1);}
+    100% {opacity:1; transform: rotateZ(360deg) scale(1);
+    visibility: visible;}
+  }
+  
+  @-moz-keyframes spinfFadeIn {
+    0% {opacity:0; transform: rotateZ(1deg) scale(0.1);}
+    100% {opacity:1; transform: rotateZ(360deg) scale(1);
+    visibility: visible;}
+  }
+  
+  @keyframes spinFadeIn {
+    0% {opacity:0; transform: rotateZ(1deg) scale(0.1);}
+    100% {opacity:1; transform: rotateZ(360deg) scale(1);
+    visibility: visible;}
+  }
+  
+  @-webkit-keyframes growImg {
+    0% {transform: scale(0.35);}
+    100% {transform: scale(0.6);}
+  }
+  
+  @-moz-keyframes sgrowImg {
+    0% {transform: scale(0.35);}
+    100% {transform: scale(0.6);}
+  }
+  
+  @keyframes growImg {
+    0% {transform: scale(0.35);}
+    100% {transform: scale(0.6);}
+  }
+
+  @-webkit-keyframes spin{
+    0% {opacity:1; transform: rotateZ(-20deg) scale(0.9);}
+    100% {opacity:0; transform: rotateZ(30deg) scale(1);
+    visibility: visible;}
+  }
+  
+  @-moz-keyframes spin{
+    0% {opacity:1; transform: rotateZ(-20deg) scale(0.9);}
+    100% {opacity:0; transform: rotateZ(30deg) scale(1);
+    visibility: visible;}
+  }
+  
+  @keyframes spin{
+    //0% {transform: rotateZ(-20deg) scale(0.75); opacity: 0;}
+    0% {transform: rotateZ(-20deg) scale(0.75); opacity: 0;}
+    3%{opacity: 1;}
+    22% {opacity: 1;}
+    25% {transform: rotateZ(20deg) scale(1); opacity: 0;
+    visibility: visible;}
+    100% {opacity: 0;}
+  }
+
+  //before
+  [data-aos="my-fade"] {
+    transform: scale(0.5);
+    opacity: 0;
+    transition-property: transform, opacity;
+  }
+  /* After animation */
+  [data-aos="my-fade"].aos-animate {
+    transform: scale(1.5);
+    opacity: 1;
+  }

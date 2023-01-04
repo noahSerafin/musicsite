@@ -1,0 +1,24 @@
+@use "../../sass/variables.scss" as *;
+
+.payment-failed{
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 50px 15%;
+    display: flex;
+    flex-direction: column;
+    height: 75vh;
+    overflow-y: hidden;
+    a{
+        text-transform: uppercase;
+        text-decoration: none;
+        color: white;
+        font-size: 1.5rem;
+        margin-bottom: 25px;
+        margin-top: 25px;
+        border: 1px solid white;
+    }
+    a:hover{
+        color: $threetonered;
+    }
+}

@@ -1,0 +1,56 @@
+@use "../../sass/variables.scss" as *;
+
+.music-dashboard{
+    padding-right: 2.5%;
+    padding-left: 2.5%;
+    overflow-x: hidden;
+    .music-dashboard__header{
+        font-family: "Monument Extended";
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid $lightgrey;
+        .music-dashboard__header__title{
+            //font-family: "Arial";
+            letter-spacing: 0px;
+            text-transform: uppercase;
+        }
+        .music-dashboard__header__button{
+            background-color: transparent;
+            border-radius: 15px;
+            //height: 2em;
+            margin-right: 2%;
+            border: 1px solid $lightgrey;
+            font-size: 1.1rem;
+            text-transform: uppercase;
+        }
+        .music-dashboard__header__button:hover{
+            cursor: pointer;
+        }
+    }
+    .music-dashboard__content{
+        padding: 2.5%;
+    }
+    .music-dashboard__upload-form--hidden{
+        visibility: hidden;
+        display: none;
+    }
+    .music-dashboard__upload-form{
+        visibility: visible;
+        display: block;
+        //padding: 3%;
+        //temp
+        padding-top: 1%;
+        height: 79vh;
+        overflow-y: scroll;
+        padding-bottom: 24px;
+        border-bottom: 1px solid $lightgrey;
+    }
+}
+.Editor, .Releases{
+    height: 90vh;
+    overflow-y: scroll;
+}
+.restricted{
+    padding-left: 0;
+}
