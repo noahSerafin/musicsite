@@ -1,0 +1,49 @@
+@use "../../sass/variables.scss" as *;
+
+.dragable-container__dragable{
+    width: 97%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 0.1fr;
+    .dragable-container__dragable__handle{
+        //cursor: grab;
+        margin-top: 17%;
+        margin-left: 30%;
+        width: 10px;
+        height: 10px;
+        border-radius: 10px;
+        margin-right: 5px;
+        //background-color: $lightlightgrey;
+        border: 1px solid $lightgrey;
+        visibility: hidden;
+    }
+    .dragable-container__dragable__input{
+        height: 1.4rem;
+        //box-shadow: inset 1px 1px $lightlightgrey;
+        box-shadow: 1px 2px 2px 0px $lightgrey;
+        margin-bottom: 0.5rem;//0.7rem;
+        padding: 1px 2px;
+        border: 1px solid $lightgrey;
+        background-color: white;
+        margin-right: 10%;
+        .dragable-container__dragable__input__select{
+            background-color: transparent;
+            border: none;
+            width: 100%;
+        }
+    }
+    .dragable-container__dragable__button{
+        cursor: pointer;
+        margin-top: 10%;
+        margin-right: 30%;
+        width: 20px;
+        height: 20px;
+        padding: 0;
+        background-color: transparent;
+        border: none;
+    }
+}
+.dragable-container__button{
+    float: right;
+    background-color: white;
+    border-radius: 5px;
+}

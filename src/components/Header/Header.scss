@@ -1,0 +1,164 @@
+@use "../../sass/variables.scss" as *;
+
+.header{
+  position: relative;
+    background-color: #000;
+    width: 100%;
+    height: 116px;
+    padding-top: 45px;
+    display: flex;
+    justify-content: space-between;
+    z-index: 3;
+    @include xs{
+      padding-top: 20px;
+      justify-content: space-around;
+      height: 85px;
+    }
+    .header__burger{
+      width: 20%;
+      background: transparent;
+      padding: 0;
+      border: 0;
+      //display: flex;
+      //justify-content: center;
+     .header__burger__container{
+       margin-left: 5rem;
+       display: flex;
+       justify-content: flex-start;
+       align-items: flex-start;
+       height: 35px;
+       @include xs{
+        margin-left: 0;
+      }
+      .iconify{
+        color: #ececec;
+        transform: scaleY(1.7) scaleX(2);
+        height: 33px;
+        width: 30px;
+        border-radius: 3px;
+        path {
+          stroke: white;
+        }
+      }
+      .burger-hidden{
+        @include xs{
+          position: absolute;
+          display: none;
+          visibility: hidden;
+          z-index: -4;
+        }
+      }
+     } 
+     #burger-list{
+      .nav-item{
+        color: white;
+        text-decoration: none;
+       }
+     }
+     .burger-list{
+       position: relative;
+       margin-left: 9.5rem;
+       top: -24px;
+       display: flex;
+       justify-content: space-evenly;
+       visibility: hidden;
+     }
+     .burger-list--anim{
+      width: 100%;
+      position: relative;
+      margin-left: 9.5rem;
+      top: -24px;
+      display: flex;
+      justify-content: space-evenly;
+      animation: left-to-right 0.5s ease-in-out 0s forwards;
+      @include lg{
+        .desktop-only{
+          display: none;
+        }
+        font-size: 12px;
+        animation: topdown 0.5s ease-in-out 0s forwards;
+        position: relative;
+        margin-left: 0;
+        top: -24px;
+        left: 8rem;
+        width: 30%;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        grid-gap: 0.5rem;
+        padding: 0;
+      }
+      @include xs{
+        font-size: 12px;
+        animation: topdown 0.5s ease-in-out 0s forwards;
+        position: absolute;
+        margin-left: 0;
+        top: 10px;//10px; if not logged in?? 56px with wp bar
+        width: 20%;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+      }
+     }
+    }
+    .header__burger__container:hover{
+      .header-menu-line{
+        color: $threetonered;
+        background-color: $threetonered;
+      }
+      cursor: pointer;
+    }
+    .header__logo{
+      width: 20%;
+      .header__logo__home-link{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        #center-logo{
+          transform: scale(0.6);
+          position: absolute;
+          top: 0;
+          @include xs{
+            transform: scale(0.2);
+          }
+        }
+      }
+    }
+    .header__socials{
+      width: 20%;
+      display: flex;
+      justify-content: space-evenly;
+      #amplify{
+        transform: scale(0.095);
+        position: relative;
+        top: -52px;
+        right: 10px;
+        @include xs{
+          top: -31px;
+          right: 3px;
+        }
+        path{
+          transition: color .5s ease;
+          fill: white;
+        }
+      }
+      #amplify:hover{
+        path{
+          fill: $threetonered;
+        }
+      }
+      .header__socials__nav-item{
+        width: 15px;
+      }
+      .iconify{
+        color:$white;
+        transition: color .5s ease;
+        @include sm{
+          transform: scale(0.75);
+        }
+      }
+      .iconify:hover{
+        color:$threetonered;
+      }
+    }
+  }

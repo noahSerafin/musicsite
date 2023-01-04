@@ -1,0 +1,149 @@
+@use "../../sass/variables.scss" as *;
+.tape-container{
+    overflow-y: hidden; 
+    overflow-x: hidden;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    top: -100vh;//-95vh;
+    h1{
+      text-align: center;
+      font-family: "Basement";
+      text-transform: uppercase;
+      color: black;
+      margin-bottom: 0;
+      font-size: 4rem;
+      @include xs {
+        font-size: 12vw
+      }
+    }
+}
+.tape-products{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    width: 200%;
+    flex-shrink: 0;
+    transition: all 0.5s;
+    padding: 0;
+}
+
+.carousel__button--left, .carousel__button--right{
+    position: absolute;
+    top: 0%;
+    //translate: translateY(-50%);
+    z-index: 5;
+    background: transparent;
+    border: 0;
+    height: 100%;
+    width: 30%;
+    @include xs{
+      width: 15%;
+      height: 50%;
+      top: -5%;//-14%;
+    }
+    //border: 1px solid green;
+  .iconify{
+    color: white;
+    width: 40px;
+    height: 40px;
+  }
+  .carousel__button__img{
+    height: 10%;
+    object-fit: contain;
+    transition: 0.1s ease all;
+    transform: scale(0.8);
+    @include xs{
+      transform: scale(0.9);
+    }
+  }
+}
+.carousel__button--left{
+  left: 0;
+  .carousel__button__img{
+    margin-left: 33%;
+    @include xs{
+      margin-left: 3%;
+    }
+
+  }
+}
+.carousel__button--right{
+    right: 0;
+    .carousel__button__img{
+      margin-right: 33%;
+    }
+}
+.carousel__button--left:hover, .carousel__button--right:hover{
+  cursor: pointer;
+  .carousel__button__img{
+    transform: scale(1.2);
+  }
+}
+.grain-background{
+    width: 100vw;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    z-index: -1;
+    @include lm{
+      //height: 100vh;
+    }
+    @include sm{
+      width: 100vw;
+      left: 0;
+      object-fit: cover;
+      height: 100%;
+    }
+}
+.tapes0{
+
+  transform: translate(-50%);
+  @include xs{
+    transform: translate(-125%);
+  }
+}
+
+.tapes1{
+  //transition: none;
+  transform: translate(-20%);
+  @include xs{
+    transform: translate(-65%);
+  }
+}
+.tapes2{
+  transition: none;
+  transform: translate(-50%);
+  @include xs{
+    transform: translate(-125%);
+  }
+}
+
+.tapes-1{
+  //transition: none;
+  transform: translate(-80%);
+  @include xs{
+    transform: translate(-185%);
+  }
+}
+.tapes-2{
+  transition: none;
+  transform: translate(-50%);
+  @include xs{
+    transform: translate(-125%);
+  }
+}
+.buy-now-button--container{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+.homepage-container__mid{
+  .tape-container{
+    @include xs{
+      top: -62vh;
+    }
+  }
+}

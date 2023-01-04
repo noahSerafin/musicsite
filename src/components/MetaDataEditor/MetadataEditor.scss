@@ -1,0 +1,109 @@
+@use "../../sass/variables.scss" as *;
+
+.upload-form__label{
+    margin-bottom: 0.5rem;
+    margin-left: 0.2rem;
+    text-transform: uppercase;
+}
+.metadata-editor__basic-info{
+    display: grid;
+    grid-template-areas: "l r" 
+    "b b";
+    border-bottom: 1px solid $lightgrey;
+    padding: 25px;
+    padding-top: 0;
+    .metadata-editor__basic-info--left{
+        grid-area: l;
+        //width: 60%;
+        display: flex;
+        flex-direction: column;
+        .metadata-editor__basic-info--left__header{
+            margin-top: 0;
+        }
+        .metadata-editor__basic-info--left__label{
+            text-transform: uppercase;
+            margin-top: 10px;
+            margin-bottom: 5px;
+        }
+        .metadata-editor__basic-info--left__input{
+            outline: none;
+            height: 1.7rem;
+            //box-shadow: inset 1px 1px $lightlightgrey;
+            box-shadow: 1px 2px 2px 0px $lightgrey;
+            margin-bottom: 0.5rem;//0.7rem;
+            padding: 1px 2px;
+            border: 1px solid $lightgrey;
+            background-color: white;
+        }
+    }
+    .metadata-editor__basic-info--right{
+        grid-area: r;
+        display: flex;
+        flex-direction: column;
+        border-radius: 15px;
+        //border: 1px solid $lightgrey;
+        background-color: $lightlightgrey;
+        box-shadow: 2px 2px 2px 1px $lightgrey;
+        //width: 40%;
+        height: 60%;
+        padding: 10px;
+        margin-left: 5%;
+        margin-top: 90px;
+        .metadata-editor__basic-info--right__label{
+            text-transform: uppercase;
+            margin-top: 10px;
+            margin-bottom: 5px;
+        }
+    }
+    .metadata-editor__basic-info--bottom{
+        grid-area: b;
+        display: grid;
+        margin-top: 20px;;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 5%;
+    }
+}
+.metadata-editor__product-identification{
+    border-bottom: 1px solid $lightgrey;
+    padding: 40px 0px 25px 10px;
+    padding-top: 0;
+    .metadata-editor__product-identification__inputs{
+        //width: 60%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 5%; 
+    }
+}
+.metadata-editor__descriptive-metadata{
+    border-bottom: 1px solid $lightgrey;
+    padding-bottom: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    .metadata-editor__descriptive-metadata__header{
+
+    }
+    .metadata-editor__descriptive-metadata__inputs{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 5%
+    }
+}
+.metadata-editor__artists-contributors{
+    padding: 0 0px 10px 10px;
+    padding-bottom: 0;
+}
+.metadata-editor__rights{
+    padding: 25px;
+    padding-top: 0;
+    .metadata-editor__rights__inputs{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 0% 17%;
+        .invisible{
+            visibility: hidden;
+        }
+        .upload-form__input{
+            
+        }
+    }
+}

@@ -1,0 +1,39 @@
+@use "../../sass/variables.scss" as *;
+
+.checklist{
+    margin-top: 100px;
+    h1{
+      font-size: 4em;
+    }
+    text-align: center;
+    align-content: center;
+    .checklist-grid{
+      display: grid;
+      grid-template-columns: 60% 0.5fr repeat(3, 1fr);
+      width: 90%;
+      margin-left: 5%;
+      margin-right: 5%;
+      .left-of{
+        text-align: left;
+        padding-left: 15px;
+      }
+      p {
+        font-size: 1.6em;
+        font-weight: bold;
+        border-bottom: 3px solid white;
+        margin-bottom: 0px;
+        padding: 5px;
+        line-height: 1em;
+      }
+      .tick-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      #tick{
+        text-align: center;
+        //margin-top: 0.2em;
+      }
+      
+    }
+}

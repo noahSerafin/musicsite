@@ -1,0 +1,30 @@
+.get-playlisted{
+    width: 100%;
+    background-color: black;
+    padding: 80px 2.5%;
+    display: flex;
+    .get-playlisted__playlist-img{
+        width: 45%;
+    }
+    .get-playlisted__text{
+        margin-left: 5%;
+        margin-right: 2.5%;
+        width: 45%;
+        display: flex;
+        flex-direction: column;
+        text-transform: uppercase;
+        color: white;
+        .get-playlisted__text__header{
+            margin: 0;
+            font-size: 3.5rem;
+            line-height: 3.5rem;
+        }
+        .get-playlisted__text__text{
+            font-size: 1.6rem;
+            line-height: 1.6rem;
+        }
+        .get-playlisted__playlist-img{
+            object-fit: contain;
+        }
+    }
+}

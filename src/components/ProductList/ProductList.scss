@@ -1,0 +1,113 @@
+@use "../../sass/variables.scss" as *;
+
+.product {
+  text-decoration: none;
+    color: white;//#000;
+    background-color: black;
+    text-align: center;
+    display: flex;
+    //justify-content: center;
+    flex-flow: column;
+    width: 30%;
+    height: 240px;
+    border: 3px solid white;
+    border-radius: 15px;
+    //margin-left: 7.5%;
+      @include xs{
+        margin-top: 12px;
+      }
+      #plus{
+        //background-image: url(../img/asset-scribble.png);
+        position: inherit;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 1;
+      }
+    .product__title-container{
+        .product__title-container__title{
+            margin: 0;
+        }
+        font-size: 3.5rem;
+        margin-bottom: 0;
+        @include xs{
+          font-size: 3rem;
+        }
+        .product__title-container__scribble{
+          position: absolute;
+          z-index: 0;
+          transform: scale(0.085);
+        }
+    }
+    .product__price{
+        display: grid;
+        height: 30%;
+        justify-content: center;
+        align-items: center;
+        //font-style: italic;
+        color: white;//#000;
+        margin: 0.1rem;
+        font-size: 4em;
+        color: $threetonered;
+    
+        .subscription-details{
+          width: 90%;
+        }
+    }
+    .product__subscription{
+        margin: 0;
+        margin-bottom: 0.7rem;
+    }
+    .cart{
+        .iconify{
+          transform: scale(2.8);
+          margin-right: 25px;
+          margin-bottom: 10px;
+        }
+        .cart-text{
+          text-decoration: underline;
+          text-transform: uppercase;
+        }
+        @include xs{
+          margin-bottom: 10px;
+        }
+    }
+}
+.product:hover{
+    cursor: pointer;
+    background-color: white;
+    border-color: $threetonered;
+    color: $threetonered;
+    .product__title-container__title{
+    color: $threetonered;
+    }
+    .product__description{
+    box-shadow: $threetonered 10px 10px 0px 0px, $threetonered 10px 10px 0px 1px;
+    //background-color: $threetonered;
+    }
+}
+.non-mobile{
+    .product{
+        border: 3px solid white;
+        border-radius: 15px;
+        .product__title-container{
+          font-size: 4em;
+        }
+        .price{
+          font-size: 3em;
+          color: $threetonered;
+        }
+    }
+}
+.whats-included{
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 2px;
+    text-align: center;
+    border: 1px solid white;
+    border-radius: 10px;
+}
+.included-hidden{
+    visibility: hidden;
+}
+

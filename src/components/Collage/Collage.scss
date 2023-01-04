@@ -1,0 +1,114 @@
+@use "../../sass/variables.scss" as *;
+
+.collage{
+    width: 44vw;
+    //background-color: #393939;
+    //float: right;
+    height: 100%; //550px;
+    position: relative;
+    display: inline-block;
+    margin-left: 52%;
+    top: -60%;//-100%;
+    float: right;
+    //right: 5vw;
+    @include lm{
+      right: 15.5vw;
+      ///top: -15%;
+    }
+    @include xs{
+      margin-left: 0;
+      top: 15%;
+      left: -35%;//-35%; //when body is proper width oterwisw 40%
+      width: 90vw;
+    }
+    .collage__img{
+      position: absolute;
+      transform: scale(0.35);
+      box-shadow: black 10px 10px 0px 0px, $threetonered 10px 10px 0px 2px;
+      @include lm{
+        transform: scale(0.3);
+      }
+      @include xs{
+        transform: scale(0.16);
+      }
+    }
+    .collage__img{
+      transition: transform .5s ease;
+    }
+    #collage-img1{
+      z-index: 1;
+      top: -190px;
+      left: 10px; 
+      @include lm{
+        //top: -43%;//-190px;
+        //left: 5%;//10px;
+      }
+      @include xs{
+        top: -276px;
+        left: -135px;
+      }
+    }
+    #collage-img2{
+      z-index: 2;
+      top: 20px;  
+      left: -110px;
+      @include lm{
+        //top: -5%;//20px;  
+        //left: -8%//-110px;
+      }
+      @include xs{
+        top: -123px;
+        //left: 30px;
+      }
+    }
+    #collage-img3{
+      z-index: 3;
+      top: -400px;
+      left: 245px;
+      @include lm{
+        //top: -72%;//-400px;
+        //left: 38%;//245px;
+      }
+      @include xs{
+        top: -420px;
+        left: -4px;
+      }
+    }
+    #collage-img4{
+      z-index: 4;
+      top: -120px;
+      left: 230px;
+      @include lm{
+        //top: -33%;
+        //left: 35%;
+      }
+      @include xs{
+        top:-270px;
+        left: -8px;
+      }
+    }
+    #collage-img5{
+      z-index: 5;
+      top: 80px;
+      left: 100px;
+      @include lm{
+        //top: 0%;
+        left: 84px;
+      }
+      @include xs{
+        top: -98px;
+        left: -41px;
+      }
+    }
+    .collage__img:hover{
+      //animation: growImg 2s ease-in-out 0s iteration-count direction fill-mode;
+      transform: scale(0.4) translateY(-100px);
+      //z-index: 9 !important;
+      @include lm{
+        transform: scale(0.35) translateY(-100px);
+      }
+      @include xs{
+        transform: scale(0.3) translateY(-50px);
+      }
+    }
+}

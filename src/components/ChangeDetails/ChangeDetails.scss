@@ -1,0 +1,60 @@
+@use "../../sass/variables.scss" as *;
+
+.change-details{
+    height: 100%;
+}
+.change-details__header{
+    display: flex;
+    height: 10%;
+    .change-details__header__nav{
+        width: 100%;
+        color: $darkgrey;
+        background-color: transparent;
+        border: none;
+        border-bottom: 2px solid white;
+        border-right: 2px solid white;
+        font-family: "Monument Extended";
+        text-transform: uppercase;
+        font-weight: bold;
+        letter-spacing: 1px;
+        text-align: center;
+    }
+    .end{
+        border-right: none;
+    }
+    .change-details__header__nav:hover{
+        cursor: pointer;
+        color: $threetonered;
+    }
+}
+.info{
+    :nth-child(1){
+        color: $threetonered;
+    }
+}
+.password{
+    :nth-child(2){
+        color: $threetonered;
+    }
+}
+.billing{
+    :nth-child(3){
+        color: $threetonered;
+    }
+}
+.change-details__container{
+    text-align: center;
+    display: grid;
+    width: 90%;
+    margin-left: 5%;
+    margin-top: 5%;
+    .change-details__container__input{
+        width: 60%;
+        margin-left: 20%;
+        margin-bottom: 20px;
+        margin-top: 10px;
+    }
+    button{
+        width: 20%;
+    }
+}

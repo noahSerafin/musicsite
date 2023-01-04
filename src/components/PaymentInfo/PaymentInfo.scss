@@ -1,0 +1,92 @@
+@use "../../sass/variables.scss" as *;
+
+.payment-info-popup-container{
+    position: absolute;//relative;
+    top: -50px;
+    width: 100%;
+    height: 100%;
+    z-index: 5;
+    background-color: rgba(220, 220, 220, 0.5);
+    padding: 20% 33%;
+    .payment-info-popup-container__popup{
+        padding: 0.1% 2% 2% 2%;
+        width: 30%;
+        position: relative;
+        opacity: 1;
+        background-color: $popgrey;
+        border-radius: 15px;
+        box-shadow: 1px 1px 2px 2px $lightgrey;
+        .payment-info-popup-container__popup__info{
+            //width: 50%;
+            display: flex;
+            flex-direction: column;
+            .payment-info-popup-container__popup__info__header,  .payment-info-popup-container__popup__info__label{
+                text-transform: uppercase;
+                justify-content: space-between;
+            }
+            .payment-info-popup-container__popup__info__input{
+                outline: none;
+                border: 1px solid $lightgrey;
+                
+            }
+            .payment-info-popup-container__popup__info__half-container{
+                display: flex;
+                flex-direction: row;
+                margin-top: 1em;
+                margin-bottom: 0.5em;
+                .payment-info-popup-container__popup__info__half-container__half{
+                    width: 50%;
+                    .payment-info-popup-container__popup__info__half-container__half__expiry{
+                        display: flex;
+                        justify-content: flex-start;
+                        align-items: flex-start;
+                        p{
+                            margin: 0px 5px 5px 5px;
+                        }
+                        .payment-info-popup-container__popup__info__half-container__half__expiry__input{
+                            width: 25%;
+                            height: 1em;
+                            margin: 0px;
+                        }
+                    }
+                }
+            }
+            .payment-info-popup-container__popup__info__third-container{
+                margin-top: 1em;
+                display: flex;
+                justify-content: space-between;
+                align-items: flex-end;
+                .payment-info-popup-container__popup__info__third-container__third__security{
+                    p{
+                        margin: 0;
+                        font-size: 0.7em;
+                        color: $darkgrey;
+                    }
+                }
+                svg{
+                    position: relative;
+                    margin-left: 10px;
+                    //padding-top: 10px;
+                    transform: translate(0, 3px) scale(1.4);
+                    //transform: ;
+                }
+                .payment-info-popup-container__popup__info__third-container__third__button{
+                    padding: 0 0;
+                    height: 2em;
+                    width: 30%;
+                }
+            }
+        }
+        
+        .payment-info-popup-container__popup__close{
+            position: absolute;
+            top: 5px;
+            right: 5px;
+            border: none;
+            background-color: transparent;
+        }
+        .payment-info-popup-container__popup__close:hover{
+            cursor: pointer;
+        }
+    }
+}

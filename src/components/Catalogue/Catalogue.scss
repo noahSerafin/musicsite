@@ -1,0 +1,140 @@
+@use "../../sass/variables.scss" as *;
+
+.music-dashboard__catalogue{
+    visibility: visible;
+    display: grid;
+    grid-template-columns: 2fr 0.8fr 3fr 0.5fr 0.5fr 0.5fr 2fr;
+    padding: 10px;
+    width: 80%;
+    //height: 67vh;
+    overflow-y: scroll;
+    margin-top: 20px;
+    margin-bottom: 15%;
+    padding: 50px;
+    padding-left: 10%;
+    padding-right: 10%;
+    border-radius: 15px;
+    background-color: white;
+    box-shadow: 2px 2px 4px 2px $lightgrey;
+    
+    /*.music-dashboard__catalogue__header{
+        font-size: 0.8rem;
+        font-weight: bold;
+        padding-bottom: 10px;
+        border-bottom: px solid $lightgrey;
+        padding-right: 5px;
+        padding-left: 10px;
+    }*/
+    .music-dashboard__catalogue__section, .music-dashboard__catalogue__section--one, .music-dashboard__catalogue__section--last, .music-dashboard__catalogue__status, .light-container{
+        display: flex;
+        padding-left: 10px;
+        align-items: center;
+        margin: 0;
+        //border: 1px dotted white;
+        border-bottom: 1px solid $lightgrey;
+    }
+    .music-dashboard__catalogue__section--one{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+
+    }
+    .music-dashboard__catalogue__art{
+        padding: 10px;
+        padding-left: 0;
+        height: 160px;
+        width: 100%;
+        object-fit: contain;                
+        //display: none;
+        //border-bottom: 1px solid $lightgrey;
+    }
+    .music-dashboard__catalogue__section__title{
+        font-weight: bold;
+        font-size: 1.2rem;
+        margin-bottom: 0;
+        margin-top: 5px;
+    }
+    .music-dashboard__catalogue__section__aritsts{
+        margin-right: 4px;   
+        .music-dashboard__catalogue__section__artists__aritst{
+            font-size: 0.9rem;
+        }
+    }
+    .music-dashboard__catalogue__section--last{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-end;
+        padding: 5px;
+        //padding-right: 0;
+    }   
+    .music-dashboard__catalogue__section__light--green, .music-dashboard__catalogue__section__light--red, .music-dashboard__catalogue__section__light--blue{
+        //width: 10px;
+        //height: 10px;
+        border-radius: 10px;
+        margin-right: 5px;
+        margin-top: 5px;
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 0.9rem;
+    }
+    .music-dashboard__catalogue__section__light--green{
+        color: #2fcc10;//greenyellow;
+    }
+    .music-dashboard__catalogue__section__light--blue{
+       color: orange
+    }
+    .music-dashboard__catalogue__section__light--red{
+       color: $threetonered;
+    }
+    .music-dashboard__catalogue__section__button{
+        border: none;
+        background-color: transparent;
+        font-weight: bold;
+    }
+    .music-dashboard__catalogue__section__button:hover{
+        cursor: pointer;
+    }
+
+    .music-dashboard__catalogue__status{
+        width: 100%;
+        border: 1px solid $lightgrey;
+        border-radius: 10px;
+        height: 1.3rem;
+        text-align: right;
+        font-size: 0.8rem;
+        padding-right: 10px;
+        
+
+    }
+    .music-dashboard__catalogue__button-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: transparent;
+        color: white;
+        border: none;
+        border-bottom: 1px solid $lightgrey;
+        .music-dashboard__catalogue__button-container__button{
+            text-align: center;
+            line-height: 0;
+            border-radius: 10px;
+            padding: 0;
+            width: 14px;
+            height: 14px;
+            background-color: transparent;
+            border: 1px solid $lightgrey;
+        }
+        .music-dashboard__catalogue__button-container__button:hover{
+            cursor: pointer;
+        }
+    }
+    .music-dashboard__catalogue__button:hover{
+        cursor: pointer;
+    }
+}
+.music-dashboard__catalogue--hidden{
+    display: none;
+    visibility: hidden;
+}

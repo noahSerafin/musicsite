@@ -1,0 +1,49 @@
+@use "../../sass/variables.scss" as *;
+
+.footer{
+    width: 100%;
+    background-color: white;
+    color: $threetonered;
+    position: fixed;
+    bottom: 0;
+    height: 24px;
+    z-index: 9;
+    display: flex;
+    justify-content: space-between;
+    .footer__left{
+        position: relative;
+        left: 10px;
+        width: 40%;
+        display: flex;
+        justify-content: flex-start;
+        .footer__left__nav-item, .footer__left__tag{
+            font-family: 'Arial';
+            font-size: 12px;
+            text-decoration: none;
+            color: $threetonered;
+            padding: 5px;
+            margin: 0;
+        }
+        .desktop-only{
+            margin: 0;
+        }
+    }
+    .footer__left__nav-item:hover{
+        cursor: pointer;
+        color: black;
+    }
+    .footer__right{
+        width: 40%;
+        position: relative;
+        right: 0px;
+        top: 0px;
+        .footer__right__tag{
+            color: $threetonered;
+            margin: 0;
+            font-size: 12px;
+            top: 5px;
+            right: 10px;
+            position: absolute;
+        }
+    }
+}
