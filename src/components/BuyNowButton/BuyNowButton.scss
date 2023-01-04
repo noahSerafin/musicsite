@@ -1,0 +1,17 @@
+@use "../../sass/variables.scss" as *;
+
+.buy-now-button{
+    border: 2px solid black;
+    background-color: white;
+    border-radius: 5px;
+    height: 30px;
+    font-family: "Basement";
+    padding: 10px 10px;
+    padding-bottom: 2.5vw;
+    font-size: 1.9vw;
+}
+.buy-now-button:hover{
+    border: 2px solid $threetonered;
+    color: $threetonered;
+    cursor: pointer;
+}

@@ -1,0 +1,19 @@
+@use "../../sass/variables.scss" as *;
+
+.background{
+    background: black;
+    position: absolute;
+    z-index: -1;
+    top: 0px;
+    width: 100vw;
+    height: 86.5vh;
+}
+.webgl
+{
+    //position: fixed;
+    top: 0px;
+    left: 0px;
+    outline: none;
+    z-index: -1;
+    height: 100.05%;
+}

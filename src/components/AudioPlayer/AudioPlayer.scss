@@ -1,0 +1,10 @@
+.audio-player{
+    border: none;
+    background-color: transparent;
+    svg{
+        transform: scale(2);
+    }
+}
+.audio-player:hover{
+    cursor: pointer;
+}

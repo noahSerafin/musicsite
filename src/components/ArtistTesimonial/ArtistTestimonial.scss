@@ -1,0 +1,45 @@
+@use "../../sass/variables.scss" as *;
+
+.testimonial{
+    width: 50%;
+    padding: 2%;
+    display: flex;
+    justify-content: space-between;
+    @include xs{
+        width: 95%;
+    }
+    .testimonial__img{
+        //height: 80%;
+       //width: 60%;
+        object-fit: contain;
+    }
+    .testimonial__text{
+        position: relative;
+        .testimonial__text__img{
+            position: absolute;
+            width: 150%;
+            left: -35%;
+            top: -10%;
+        }
+        margin-left: 5%;
+        text-transform: uppercase;
+        .testimonial__text__header{
+            //margin-top: 20%;
+            top: 2%;
+            color: $threetonered;
+            //font-size: 1.7rem;
+            @include xs{
+                margin-top: 0;
+            }
+        }
+        .testimonial__text__quote{
+            color: white;
+            margin-top: 75%;
+            margin-left: 2%;
+            font-size: 1.1rem;
+            @include xs{
+               margin-top: 0;
+            }
+        }
+    }
+}

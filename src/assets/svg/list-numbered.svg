@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="135.772" height="144.824" viewBox="0 0 135.772 144.824">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0"/>
+      <stop offset="1" stop-color="#646464"/>
+    </linearGradient>
+  </defs>
+  <path id="Icon_metro-list-numbered" data-name="Icon metro-list-numbered" d="M49.756,119.6h90.515v18.1H49.756Zm0-54.309h90.515v18.1H49.756Zm0-54.309h90.515v18.1H49.756ZM22.6,1.928V38.134H13.55V10.98H4.5V1.928ZM13.55,76.32v7.071h18.1v9.051H4.5V71.794l18.1-8.486V56.237H4.5V47.186H31.653V67.834Zm18.1,25.174v45.257H4.5V137.7H22.6v-9.052H4.5V119.6H22.6v-9.051H4.5v-9.051Z" transform="translate(-4.499 -1.928)" fill="url(#linear-gradient)"/>
+</svg>

@@ -1,0 +1,151 @@
+[
+    {
+        "user_artist1": {
+            "tracks": {
+                "track1": 10.34,
+                "track2": 19.64,
+                "track3": 113.34,
+                "track4": 0.37,
+                "track5": 78.54,
+                "track6": 78.54,
+                "track7": 73.24,
+                "track8": 12.53,
+                "track9": 8.55,
+                "track10": 2.54,
+                "track11": 35.53,
+                "trac12": 8.53,
+                "track13": 88.24,
+                "track14": 68.51
+            },
+            "releases": {
+                "almbumname1": 398.20,
+                "almbumname2": 398.20,
+                "almbumname3": 398.20,
+                "almbumname4": 398.20,
+                "ep1": 123.23,
+                "ep2": 13.23,
+                "ep3": 3.23
+            },
+            "DSPs": {
+                "Spotify": 283.22,
+                "Apple": 12.33,
+                "Youtube": 23.43,
+                "Amazon": 49.42,
+                "Peloton": 3.92,
+                "Resso": 5.32,
+                "TIDAL": 8.20,
+                "Deezer": 1.12,
+                "VEVO": 23.03,
+                "Soundcloud": 12.21,
+                "Pandora": 1.45
+            },
+            "territories": {
+                "EN": 32.0,
+                "IR": 34.0,
+                "PO": 24.0,
+                "US": 24.12,
+                "TO": 324.23,
+                "FR": 34.23,
+                "DE": 34.0
+            }
+        },
+        "user_artist2": {
+            "tracks": {
+                "track1": 12.34,
+                "track2": 13.64,
+                "track3": 103.34,
+                "track4": 0.37,
+                "track5": 78.54,
+                "track6": 78.54,
+                "track7": 73.24,
+                "track8": 12.53,
+                "track9": 8.55,
+                "track10": 2.54,
+                "track11": 35.53,
+                "trac12": 8.53,
+                "track13": 88.24,
+                "track14": 68.51
+            },
+            "releases": {
+                "almbumname1": 398.20,
+                "almbumname2": 398.20,
+                "almbumname3": 398.20,
+                "almbumname4": 398.20,
+                "ep1": 123.23,
+                "ep2": 13.23,
+                "ep3": 3.23
+            },
+            "DSPs": {
+                "Spotify": 283.22,
+                "Apple": 12.33,
+                "Youtube": 23.433,
+                "Amazon": 49.42,
+                "Peloton": 3.32,
+                "Resso": 5.32,
+                "TIDAL": 8.20,
+                "Deezer": 1.13,
+                "VEVO": 23.03,
+                "Soundcloud": 12.21,
+                "Pandora": 1.45
+            },
+            "territories": {
+                "EN": 32.0,
+                "IR": 34.0,
+                "PO": 24.0,
+                "US": 24.12,
+                "YO": 324.23,
+                "FR": 34.23,
+                "DE": 34.0
+            }
+        },
+        "user_artist3": {
+            "tracks": {
+                "track1": 10.32,
+                "track2": 19.61,
+                "track3": 112.34,
+                "track4": 12.37,
+                "track5": 2.54,
+                "track6": 8.54,
+                "track7": 3.24,
+                "track8": 112.53,
+                "track9": 1.55,
+                "track10": 1.54,
+                "track11": 25.52,
+                "trac12": 1.53,
+                "track13": 18.22,
+                "track14": 108.31
+            },
+            "releases": {
+                "almbumname1": 398.20,
+                "almbumname2": 398.20,
+                "almbumname3": 398.20,
+                "almbumname4": 398.20,
+                "ep1": 123.23,
+                "ep2": 13.23,
+                "ep3": 3.23
+            },
+            "DSPs": {
+                "Spotify": 283.22,
+                "Apple": 12.33,
+                "Youtube": 23.43,
+                "Amazon": 49.42,
+                "Peloton": 3.92,
+                "Resso": 5.32,
+                "TIDAL": 8.20,
+                "Deezer": 1.12,
+                "VEVO": 23.03,
+                "Soundcloud": 12.21,
+                "Pandora": 1.45
+            },
+            "territories": {
+                "EN": 32.0,
+                "IR": 34.0,
+                "PO": 24.0,
+                "US": 24.12,
+                "TO": 324.23,
+                "FR": 34.23,
+                "DE": 34.0
+            }
+        }
+    }
+]

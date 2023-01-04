@@ -1,0 +1,92 @@
+[
+  {
+    "Territory": "OM",
+    "Sale Date": "2022-06-04",
+    "Source": "Spotify",
+    "isrc": "UKXN22059373",
+    "Release Title": "Sick",
+    "Track Title": "Sick",
+    "Track Artist": "Adam Hender",
+    "Units": 2,
+    "Net Payable": 0.0019361962068249604
+  },{
+    "Territory": "SI",
+    "Sale Date": "2022-06-14",
+    "Source": "Spotify",
+    "isrc": "UKXN22059373",
+    "Release Title": "Sick",
+    "Track Title": "Sick",
+    "Track Artist": "Adam Hender",
+    "Units": 2,
+    "Net Payable": 0.0019361962068249604
+  },{
+    "Territory": "EN",
+    "Sale Date": "2022-06-30",
+    "Source": "Spotify",
+    "isrc": "UKXN22059373",
+    "Release Title": "Sick",
+    "Track Title": "Sick",
+    "Track Artist": "Adam Hender",
+    "Units": 2,
+    "Net Payable": 0.0019361962068249604
+  },{
+    "Territory": "SI",
+    "Sale Date": "2022-06-28",
+    "Source": "Spotify",
+    "isrc": "UKXN22059373",
+    "Track Title": "Sick",
+    "Track Artist": "Adam Hender",
+    "Units": 2,
+    "Net Payable": 0.0019361962068249604
+  },{
+    "Territory": "HR",
+    "Sale Date": "2022-06-20",
+    "Source": "Spotify",
+    "isrc": "DKB6G2200301",
+    "Release Title": "DEAD STAR TALK",
+    "Track Title": "Winning Team",
+    "Track Artist": "DEAD STAR TALK",
+    "Units": 1,
+    "Net Payable": 0.0007932234905827201
+  }, {
+    "Territory": "DO",
+    "Sale Date": "2022-08-25",
+    "Source": "VEVO",
+    "isrc": "QMQGC2100606",
+    "Release Title": "Ophelia",
+    "Track Title": "Ophelia but it\u0027s Muffled and Slowed",
+    "Track Artist": "Dybbukk",
+    "Units": 2,
+    "Net Payable": 0.00007707467667744001
+  },{
+    "Territory": "GR",
+    "Sale Date": "2022-04-30",
+    "Source": "VEVO",
+    "ISRC": "UKVF92130303",
+    "Release Title": "So Deep",
+    "Track Title": "So Deep",
+    "Track Artist": "Jack Hawitt",
+    "Units": 10,
+    "Net Payable": 0.00007707467667744001
+  },{
+    "Territory": "BE",
+    "Sale Date": "2022-04-30",
+    "Source": "VEVO",
+    "ISRC": "UKVF92130303",
+    "Release Title": "So Deep",
+    "Track Title": "So Deep",
+    "Track Artist": "Jack Hawitt",
+    "Units": 1,
+    "Net Payable": 0.0015114916486799997
+  },{
+    "Territory": "FR",
+    "Sale Date": "2022-06-30",
+    "Source": "Spotify",
+    "ISRC": "ESA012185326",
+    "Release Title": "Better Days",
+    "Track Title": "Better Days",
+    "Track Artist": "Jack Hawitt",
+    "Units": 1,
+    "Net Payable": 0.0030369831025046402
+  }
+]
