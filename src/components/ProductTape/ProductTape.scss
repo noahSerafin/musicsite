@@ -40,6 +40,7 @@
             height: 100%;
             width: 100%;
             padding-left: 7%;
+            visibility: visible;
         }
     }
     .flip-button:hover{
@@ -68,6 +69,9 @@
         bottom: 0;
         left: 0;
         border: none;
+        .flip-button__text{
+            visibility: hidden;
+        }
     }
     .flip-button:hover{
         opacity: 0%;

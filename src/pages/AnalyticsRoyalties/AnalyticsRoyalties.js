@@ -213,12 +213,6 @@ const AnalyticsRoyalties = () => {
                                 );
                             })}
                         </select>
-                        <select className="analytics-royalties-container__data__filters__filter" value={timePeriod} onChange={(e) => {setTimePeriod(e.target.value)}}>                   
-                            <option value="1">1 Month</option>
-                            <option value="3">3 Months</option>
-                            <option value="" disabled selected>{timePeriod+" Months"}</option>
-                            <option value="6">6 Months</option>
-                        </select>
                     </div>
                 </div>
                 <div className="analytics-royalties-container__data">
@@ -247,13 +241,7 @@ const AnalyticsRoyalties = () => {
                         <h3>Top Tracks:</h3>
                         <div className="analytics-royalties-container__data__breakdowns__list">
                             <RoyaltyTopProducts data={sales} artist={artistFilter} products={tracks} territory={territoryFilter}/>
-                        </div>
-                        <h3>Top Releases:</h3>
-                        <div className="analytics-royalties-container__data__breakdowns__list">
-                        
-                        </div>
-                        
-                        
+                        </div> 
                     </div>
                 </div>
             </div>
@@ -277,4 +265,12 @@ export default AnalyticsRoyalties;
 <p>All Time Sales</p>
 <p>£92,987.42</p>
 </div>
+*/
+/*
+    <select className="analytics-royalties-container__data__filters__filter" value={timePeriod} onChange={(e) => {setTimePeriod(e.target.value)}}>                   
+            <option value="1">1 Month</option>
+            <option value="3">3 Months</option>
+            <option value="" disabled selected>{timePeriod+" Months"}</option>
+            <option value="6">6 Months</option>
+    </select>
 */

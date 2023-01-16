@@ -51,7 +51,7 @@ const MyAccount = () => {
           </div>
         </div>
         <div className={`my-account__container__left ${menuClassName()}`}>
-            <a href="/Home" className="my-account__container__left__logo__home-link">
+            <a href="/" className="my-account__container__left__logo__home-link">
               <img id="dashboard-logo" className="logo" src={logoWhite} alt="3tone Music"></img>
             </a>
             <Link className="my-account__container__left__nav"  to="dashboard">

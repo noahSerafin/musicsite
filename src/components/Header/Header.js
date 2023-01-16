@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./Header.scss";
-import logo from "../../assets/img/artistandlabelservices.png";
+import logo from "../../assets/img/newLogo.png";
 import { useAuth0 } from "@auth0/auth0-react";
 import { NavLink } from "react-router-dom";
 

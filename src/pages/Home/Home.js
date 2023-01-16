@@ -46,9 +46,11 @@ const Home = () => {
       <ThreeDBackground />
         <div className="homepage-container__top__title-container">
           <h1 className="homepage-container__top__title-container__title">RELEASE <br></br>UNLIMITED <br></br>MUSIC <br></br>EVERYWHERE</h1>
-          <h4 className="homepage-container__top__title-container__subtitle">UNLIKE DISTRO AND DITTO, WE ACTUALLY MEAN <br></br>UNLIMITED AND EVERYWHERE</h4>
+          <h4 className="homepage-container__top__title-container__subtitle">LOREM IPSUM DOLOR SIT AMET <br></br>consectetur adipiscing elit</h4>
         </div>
-        <AnimatedCollage />
+        <div className="homepage-container__top__collage-container">
+          <AnimatedCollage />
+        </div>
       </div>
       <div className="homepage-container__mid">
         <ShaderBackground />

@@ -7,21 +7,21 @@
     //background-color: #393939;
     //float: right;
     height: 100%; //550px;
-    position: relative;
     display: inline-block;
-    margin-left: 52%;
-    top: -45%;//-100%;
-    float: right;
+    //margin-left: 52%;
+    //top: -45%;//-100%;
+    //float: right;
     //right: 5vw;
     @include lm{
-      right: 5.9vw;
+      //right: 5.9vw;
       ///top: -15%;
     }
     @include xs{
       margin-left: 0;
-      top: 15%;
-      left: -35%;//-35%; //when body is proper width oterwisw 40%
+      top: 16%;
+      left: -10%;//-35%; //when body is proper width oterwisw 40%
       width: 90vw;
+      height: 76%;
     }
     .collage-anim-container__img{
         position: absolute;

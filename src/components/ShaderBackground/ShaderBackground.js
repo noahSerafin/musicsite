@@ -11,8 +11,6 @@ import { Helmet } from "react-helmet";
 
 const ShaderBackground = () => {
 
-
-
   return (
     <>
     <Helmet>
