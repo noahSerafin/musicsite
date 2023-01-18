@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/musicsite/static/css/main.0616d4f1.css",
-    "main.js": "/musicsite/static/js/main.86f50346.js",
+    "main.css": "/musicsite/static/css/main.92223327.css",
+    "main.js": "/musicsite/static/js/main.45230a56.js",
     "static/js/787.1d56e51b.chunk.js": "/musicsite/static/js/787.1d56e51b.chunk.js",
     "static/media/plant.png": "/musicsite/static/media/plant.e1a7ed0a1b2d48546a6f.png",
     "static/media/byp.png": "/musicsite/static/media/byp.77929b0ad61cb7ddd4a6.png",
@@ -21,6 +21,7 @@
     "static/media/glance.png": "/musicsite/static/media/glance.c82d2568d258a7a6fbec.png",
     "static/media/Asset23n.png": "/musicsite/static/media/Asset23n.2b650ad1d95265b83fb5.png",
     "static/media/gully.png": "/musicsite/static/media/gully.bd2fb64869116f870a89.png",
+    "static/media/3logo.png": "/musicsite/static/media/3logo.dcb69a7688f07b42a31f.png",
     "static/media/Asset20n.png": "/musicsite/static/media/Asset20n.bd289028163fd0b9f41a.png",
     "static/media/Asset22n.png": "/musicsite/static/media/Asset22n.22cb9355bdca6f12b281.png",
     "static/media/kate_nash.png": "/musicsite/static/media/kate_nash.752891ae45cc55ec947c.png",
@@ -45,12 +46,12 @@
     "static/media/Positive_Orgones_JJM_V1.mp3": "/musicsite/static/media/Positive_Orgones_JJM_V1.1145e11daa36577a2ba0.mp3",
     "static/media/SoftiWIP.mp3": "/musicsite/static/media/SoftiWIP.1145e11daa36577a2ba0.mp3",
     "index.html": "/musicsite/index.html",
-    "main.0616d4f1.css.map": "/musicsite/static/css/main.0616d4f1.css.map",
-    "main.86f50346.js.map": "/musicsite/static/js/main.86f50346.js.map",
+    "main.92223327.css.map": "/musicsite/static/css/main.92223327.css.map",
+    "main.45230a56.js.map": "/musicsite/static/js/main.45230a56.js.map",
     "787.1d56e51b.chunk.js.map": "/musicsite/static/js/787.1d56e51b.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.0616d4f1.css",
-    "static/js/main.86f50346.js"
+    "static/css/main.92223327.css",
+    "static/js/main.45230a56.js"
   ]
 }
