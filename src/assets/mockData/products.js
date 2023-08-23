@@ -1,6 +1,7 @@
-import img1 from "../img/Asset20n.png";
-import img2 from "../img/Asset21n.png";
-import img5 from "../img/Asset25n.png";
+import img1 from "../img/Asset20n1.jpg";
+import img2 from "../img/Asset21n1.jpg";
+import img5 from "../img/Asset22n1.jpg";
+import img3 from "../img/Asset23n1.jpg";
 import song from "./audio/OverBlown.mp3";
 import song2 from "./audio/SoftiWIP.mp3";
 import song3 from "./audio/Positive_Orgones_JJM_V1.mp3";
@@ -410,7 +411,7 @@ export const products = [
         "Writers": [],
         "Contributors": [],
 
-        "CoverImg": img5,
+        "CoverImg": img3,
 
         "Territories": "None Chosen",
         "Deliveries": []
