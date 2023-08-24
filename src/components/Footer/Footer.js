@@ -5,7 +5,7 @@ import { NavLink } from "react-router-dom";
 const Footer = () => {
 	  
 	const year = new Date().getFullYear();
-    const copyright = `3Tone Music ${year}`
+    const copyright = `Noah Serafin ${year}`
 
     return(
         <footer className="footer">
@@ -17,7 +17,7 @@ const Footer = () => {
                 <NavLink className="footer__left__nav-item" to="legal" state={{from: "PrivacyPolicy"}}>Privacy Policy</NavLink>
             </div>
             <div className="footer__right">
-                <p className="footer__right__tag">With offices in the UK, Sweden & U.S.A.</p>
+                <p className="footer__right__tag"></p>
             </div>
         </footer>
     )

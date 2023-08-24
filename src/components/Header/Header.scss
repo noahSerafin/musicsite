@@ -112,14 +112,19 @@
       width: 20%;
       .header__logo__home-link{
         display: flex;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
-        #center-logo{
-          transform: scale(0.6);
-          position: absolute;
-          top: 0;
-          @include xs{
-            transform: scale(0.2);
+        color: white;
+        font-weight: bold;
+        font-size: 1.2rem;
+        text-decoration: none;
+        .header__logo__home-link__logo{
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          &:nth-child(2){
+            transform: rotateZ('180');
           }
         }
       }

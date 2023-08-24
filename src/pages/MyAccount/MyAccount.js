@@ -1,6 +1,5 @@
 import React from "react";
 import "./MyAccount.scss";
-import logo from "../../assets/img/artistandlabelservices.png";
 import logoWhite from "../../assets/img/3tone_White.png";
 import { Link, Outlet, useLocation} from "react-router-dom";
 
@@ -52,7 +51,9 @@ const MyAccount = () => {
         </div>
         <div className={`my-account__container__left ${menuClassName()}`}>
             <a href="/" className="my-account__container__left__logo__home-link">
-              <img id="dashboard-logo" className="logo" src={logoWhite} alt="3tone Music"></img>
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                <path d="M1 13h-1v-1h1v1zm22-1h-1v1h1v-1zm-20-1h-1v3h1v-3zm18 0h-1v3h1v-3zm-14 0h-1v3h1v-3zm10-1h-1v5h1v-5zm-12 0h-1v5h1v-5zm14-1h-1v7h1v-7zm-10 0h-1v7h1v-7zm2-2h-1v10h1v-10zm4 0h-1v10h1v-10zm-2-2h-1v14h1v-14z"/>
+              </svg>
             </a>
             <Link className="my-account__container__left__nav"  to="dashboard">
               <svg className="my-account__container__left__nav__icon" xmlns="http://www.w3.org/2000/svg" width="44.843" height="44.844" viewBox="0 0 44.843 44.844"><path id="Icon_awesome-music" data-name="Icon awesome-music" d="M44.842,2.8A2.8,2.8,0,0,0,41.2.132L13.173,8.408a2.8,2.8,0,0,0-1.962,2.671v22.9a12.116,12.116,0,0,0-2.8-.343C3.764,33.633,0,36.142,0,39.238s3.764,5.605,8.408,5.605,8.408-2.509,8.408-5.605V18.77L39.238,12.2V28.371a12.116,12.116,0,0,0-2.8-.343c-4.644,0-8.408,2.509-8.408,5.605s3.764,5.605,8.408,5.605,8.408-2.509,8.408-5.605V2.8Z" transform="translate(0 0.001)" fill="#fff"/></svg>
