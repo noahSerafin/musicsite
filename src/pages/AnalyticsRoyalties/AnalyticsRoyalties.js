@@ -62,7 +62,7 @@ const AnalyticsRoyalties = () => {
     // check characters like ' - and $ are still found
     const dummyUser = {
         "threeToneArtists": threeToneArtists(streams),
-        "userArtists": ["Shaun Redlake"]//Rupert Stroud", "Krissi B", "Jazz Morley", "Troi Irons", "Jack Hawitt"]
+        "userArtists": ["artistName"]//Rupert Stroud", "Krissi B", "Jazz Morley", "Troi Irons", "Jack Hawitt"]
     }
 
     //create initial lists for filters

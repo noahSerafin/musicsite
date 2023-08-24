@@ -1,6 +1,6 @@
 import React from "react";
 import "./MySubscription.scss"
-import knAlt2 from "../../assets/img/knAlt2.png";
+import knAlt2 from "../../assets/img/Asset23n1.jpg";
 import { Link } from "react-router-dom";
 
 const MySubscription = (props) => {
