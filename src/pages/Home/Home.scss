@@ -8,23 +8,15 @@
 .homepage-container__top{
     position: relative;
     display: inline-block;
-    padding-top: 5%;
     width: 100vw;
     background-color: transparent;// #000;
     height: 80vh;
     text-transform: uppercase;
     .homepage-container__top__title-container{
-      margin-left: 5vw;
+      padding-top: 5%;
       color: white;
-      @include xl {
-        width: 60%;
-      }
-      @include lm {
-        width: 50%;
-      }
-      @include xs{
-        width: 100%;
-      }
+      width: 100%;
+      text-align: center;
     }
     .homepage-container__top__title-container__title{
       font-size: 5rem;

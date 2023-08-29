@@ -1,4 +1,3 @@
-import {useLocation} from "react-router-dom";
 import "./ThreeDBackground.scss";
 import * as THREE from "three";
 //import { OrbitControls } from "three/examples/jsm/controls/OrbitControls.js";
@@ -6,11 +5,9 @@ import React, { useState, useEffect } from "react";
 
 const ThreeDBackground = () => {  
   //var [currentPage, setCurrentPage] = useState();
-  useLocation();
+
   useEffect(() => { 
     //page listener 
-      const url = window.location.href;
-      const urlEnd = url.substring(url.lastIndexOf('/') + 1);
       //setCurrentPage(currentPage = urlEnd)
 
     // Canvas
@@ -74,7 +71,7 @@ const ThreeDBackground = () => {
     });*/
 
     const  material = new THREE.LineBasicMaterial({
-        color: "rgb(214, 35, 41)"//,
+        color: "rgb(109, 212, 213)"//,
         //wireframe: true
     });
 
@@ -88,8 +85,9 @@ const ThreeDBackground = () => {
     //particlesMesh.castShadow = true;
     //sphere.rotation.x = Math.PI / 2
     sphere.position.z = 0;
-    sphere.position.x = -0.2;
+    sphere.position.x = -0;
     sphere.position.y = -0.9;
+    sphere.rotation.x = 90;
     
     
    
@@ -129,9 +127,9 @@ const ThreeDBackground = () => {
       100
     );
     camera.position.x = 0;
-    camera.position.y = 0.3;
-    camera.position.z = 0.4;
-    camera.rotateX(-0.5);
+    camera.position.y = 0;
+    camera.position.z = 0.2;
+    //camera.rotateX(-0.5);
     scene.add(camera);
 
     // Controls
@@ -182,7 +180,7 @@ const ThreeDBackground = () => {
      var lastmousex=-1; 
      var lastmousey=-1;
      var lastmousetime;
-     var mousetravel = 0;
+     var mousetravel = -1400;
      document.addEventListener("mousemove", function(e) {
          var mouseX = e.pageX;
          var mouseY = e.pageY;
