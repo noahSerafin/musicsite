@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from "react";
 import MetadataEditor from "../MetaDataEditor/MetadataEditor";
-import placeHolderCover from "../../assets/img/3tone_gradient.png";
+import placeHolderCover from "../../assets/img/cd.png";
 import TracksView from "../TracksView/TracksView"
 import "./ReleaseEditor.scss"
 import ReleaseTerritories from "../ReleaseTerritories/ReleaseTerritories";

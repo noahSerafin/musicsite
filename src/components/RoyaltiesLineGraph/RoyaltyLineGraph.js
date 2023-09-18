@@ -178,12 +178,12 @@ const RoyaltyLineGraph = (props) => {
             <AreaChart data={sales}>
                 <defs>
                     <linearGradient id="color" x1="0" y1="0" x2="0" y2="1" >
-                        <stop offset="0%" stopColor="#d62329" stopOpacity={1} />
-                        <stop offset="75%" stopColor="#d62329" stopOpacity={0.2} />
+                        <stop offset="0%" stopColor="#6dd4d5" stopOpacity={1} />
+                        <stop offset="75%" stopColor="#6dd4d5" stopOpacity={0.2} />
                     </linearGradient>
                 </defs>
 
-                <Area dataKey="units" stroke="#d62329" fill="url(#color)"/>
+                <Area dataKey="units" stroke="#6dd4d5" fill="url(#color)"/>
 
                 <XAxis dataKey={"date"} axisLine={false} tickLine={false} tickFormatter={date => {
                     //sort by year as well as month

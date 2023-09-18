@@ -85,7 +85,7 @@ const RoyaltyBarGraph = (props) => {
                 dataKey="value"
              >
                 {data.map((entry, index) => (
-            <Cell fill="#d62329" />
+            <Cell fill="#6dd4d5" />
                 ))}
              </Bar>
             </BarChart>

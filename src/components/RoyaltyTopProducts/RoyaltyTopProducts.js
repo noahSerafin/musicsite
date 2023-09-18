@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./RoyaltyTopProducts.scss";
-import placeholder from "../../assets/img/3tone_gradient.png";
+import placeholder from "../../assets/img/cd.png";
 
 const RoyaltyTopProducts = (props) => {
 
