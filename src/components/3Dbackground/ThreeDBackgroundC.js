@@ -5,18 +5,104 @@ import React, { useState, useEffect } from "react";
 
 const ThreeDBackground = () => {  
   //var [currentPage, setCurrentPage] = useState();
+  const scene = new THREE.Scene();
+  //--------------------------------------------------------------------
+    const VS = `
+    
+    `;
+    
+    const FS = `
+      
+    `;
+
+    var mat = new THREE.ShaderMaterial({
+      wireframe: false,
+      //fog: true,
+      uniforms: {
+        time: {
+          type: "f",
+          value: 0.0,
+        },
+        pointscale: {
+          type: "f",
+          value: 0.0,
+        },
+        decay: {
+          type: "f",
+          value: 0.0,
+        },
+        complex: {
+          type: "f",
+          value: 0.0,
+        },
+        waves: {
+          type: "f",
+          value: 0.0,
+        },
+        eqcolor: {
+          type: "f",
+          value: 0.0,
+        },
+        fragment: {
+          type: "i",
+          value: true,
+        },
+        redhell: {
+          type: "i",
+          value: true,
+        },
+      },
+      vertexShader: VS,
+      fragmentShader: FS
+    });
+
+    const mat2 = THREE.MeshBasicMaterial('#BDBDBD')
+    
+    var primitiveElement = function () {
+      this.mesh = new THREE.Object3D();
+      
+      var geo = new THREE.IcosahedronBufferGeometry(3, 7);
+      var mesh = new THREE.Mesh(geo, mat2);
+    
+      //---
+      this.mesh.add(mesh);
+    };
+    
+
+
+    var _primitive;
+    function createPrimitive() {
+      _primitive = new primitiveElement();
+      scene.add(_primitive.mesh);
+    }
+    //--------------------------------------------------------------------
+    var options = {
+      perlin: {
+        vel: 0.002,
+        speed: 0.0005,
+        perlins: 1.0,
+        decay: 0.1,
+        complex: 0.3,
+        waves: 20.0,
+        eqcolor: 11.0,
+        fragment: true,
+        redhell: true,
+      },
+      spin: {
+        sinVel: 0.0,
+        ampVel: 80.0,
+      },
+    };
 
   useEffect(() => { 
-    //page listener 
-      //setCurrentPage(currentPage = urlEnd)
-
-    // Canvas
+    createPrimitive();
     const canvas = document.querySelector("canvas.webgl");
 
     // Scene
-    const scene = new THREE.Scene();
+    
 
     // Objects
+ 
     //const geometry = new THREE.TorusGeometry( .8, .3, 18, 100 );
     let g = new THREE.SphereGeometry(1, 24, 24);
     SphereToQuads(g);
@@ -75,27 +161,19 @@ const ThreeDBackground = () => {
         //wireframe: true
     });
 
-   
-
     // Mesh
     const sphere = new THREE.LineSegments(g, material);
-    //sphere.receiveShadow = true;
-    //sphere.castShadow = true;
-   
-    //particlesMesh.castShadow = true;
-    //sphere.rotation.x = Math.PI / 2
+  
     sphere.position.z = 0;
     sphere.position.x = -0;
     sphere.position.y = -0.9;
     sphere.rotation.x = 90;
-    
-    
    
-    //scene.add(particlesMesh);   
+
     scene.add(sphere)
     
-
-    // Lights
+    // Lights //
+//
 
     const sizes = {
       width: window.innerWidth,
@@ -188,6 +266,8 @@ const ThreeDBackground = () => {
              mousetravel += Math.max( Math.abs(mouseX-lastmousex), Math.abs(mouseY-lastmousey) );
          lastmousex = mouseX;
          lastmousey = mouseY;
+
+
      });
 
     const clock = new THREE.Clock();
@@ -205,8 +285,15 @@ const ThreeDBackground = () => {
       sphere.rotation.y = elapsedTime * 0.08;
       //sphere.rotation.y = mousetravel *  0.00006;
       sphere.rotation.x = mousetravel * 0.0006;
-      //particlesMesh.rotation.y = mouseX * (elapsedTime * 0.00008);
-      //particlesMesh.rotation.x = mouseY * (elapsedTime * 0.00008);
+
+      mat.uniforms["time"].value = options.perlin.speed;// * (Date.now() - start);
+      mat.uniforms["pointscale"].value = options.perlin.perlins;
+      mat.uniforms["decay"].value = options.perlin.decay;
+      mat.uniforms["complex"].value = options.perlin.complex;
+      mat.uniforms["waves"].value = options.perlin.waves;
+      mat.uniforms["eqcolor"].value = options.perlin.eqcolor;
+      mat.uniforms["fragment"].value = options.perlin.fragment;
+      mat.uniforms["redhell"].value = options.perlin.redhell;
 
       // Render
       renderer.render(scene, camera);

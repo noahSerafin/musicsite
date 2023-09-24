@@ -157,6 +157,10 @@
       }
       .header__socials__nav-item{
         width: 15px;
+        color: white;
+        &:hover{
+          color: $threetonered;
+        }
       }
       .iconify{
         color:$white;

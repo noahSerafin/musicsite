@@ -1,131 +1,140 @@
 import "./ThreeDBackground.scss";
-import {useLocation} from "react-router-dom";
 import * as THREE from "three";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls.js";
-import React, { useState } from "react";
-//import dat from "dat.gui";
+import React, { useEffect } from "react";
+
+import vs from '../../shaders/vs.glsl';
+import fs from '../../shaders/fs.glsl';
+const fileToString = (file) => {
+  fetch(file)
+ .then(r => r.text())
+ .then(text => {
+  console.log(text)
+  return text
+})};
+
+//import * as dat from 'lil-gui'
 
 const ThreeDBackground = () => {
-  window.addEventListener("load", init, false);
-  var [currentPage, setCurrentPage] = useState();
-  useLocation();
- 
-  function init() {
-    createWorld();
-    //createPrimitive();
-    createParticles();
-    //pageListen();
-    //createGUI();
-    createSphere();
-    animation();
-  } 
-
-  var Theme = { _black: 0x000000 };
-
-  //--------------------------------------------------------------------
-
-  var scene, camera, renderer, container;
-  var start = Date.now();
-  var _width, _height;
-  function createWorld() {
-    _width = window.innerWidth;
-    _height = window.innerHeight;
-    //---s
-    scene = new THREE.Scene();
-    //scene.fog = new THREE.Fog(Theme._darkred, 8, 20);
-    scene.background = new THREE.Color(Theme._black);
-    //---
-    camera = new THREE.PerspectiveCamera(55, _width / _height, 1, 1000);
-    camera.position.z = 12;
-    //---
-    renderer = new THREE.WebGLRenderer({ antialias: true, alpha: false });
-    renderer.setSize(_width, _height);
-    //---
-    container = document.getElementById("container");
-    container.appendChild(renderer.domElement);
-    //---
-    window.addEventListener("resize", onWindowResize, false);
-  }
-
-  function onWindowResize() {
-    _width = window.innerWidth;
-    _height = window.innerHeight;
-    renderer.setSize(_width, _height);
-    camera.aspect = _width / _height;
-    camera.updateProjectionMatrix();
-    console.log("- resize -");
-  }
-
-  //--------------------------------------------------------------------
+  //const gui = new dat.GUI()
   
-    var particlesMesh;
-    function createParticles() {
-      const particlesGeometry = new THREE.BufferGeometry();
-      const particlesCnt = 5000;
-      const posArray = new Float32Array(particlesCnt * 3);
+  // Canvas
+  useEffect(() => { 
+    const canvas = document.querySelector('.webgl');
+  
+    // Scene
+    const scene = new THREE.Scene()
+    
+    /**
+     * Textures
+     */
+    const textureLoader = new THREE.TextureLoader()
+    
+    /**
+     * Test mesh
+     */
+    // Geometry
+    const geometry = new THREE.PlaneGeometry(1, 1, 32, 32)
+    
+    // Material
+    const shaderMaterial = new THREE.RawShaderMaterial({
+      vertexShader: `
+      uniform mat4 projectionMatrix;
+      uniform mat4 viewMatrix;
+      uniform mat4 modelMatrix;
 
-      for (let i = 0; i < particlesCnt * 3; i++) {
-        posArray[i] = (Math.random() - 0.5) * 5;
-        //console.log('particles!')
+      attribute vec3 position;
+
+      void main(){
+        gl_Position = projectionMatrix * viewMatrix * modelMatrix * vec4(position, 1.0);
       }
-      particlesGeometry.setAttribute(
-        "position",
-        new THREE.BufferAttribute(posArray, 3)
-      );
-      const particlesMaterial = new THREE.PointsMaterial({
-          size: 0.005,
-         //map: pic,
-         //transparent: true,
-         //color: 'blue'
-       });
-      particlesMesh = new THREE.Points(
-          particlesGeometry,
-          particlesMaterial
-      );
-      particlesMesh.position.z = 10;
-      scene.add(particlesMesh)
+      `,
+      fragmentShader: `
+        precision mediump float;
+
+        void main(){
+          gl_FragColor = vec4(0.4297, 0.832, 0.8359, 1.0);
+        }
+      `
+    })
+    const material = new THREE.MeshBasicMaterial({
+      color: '#828282'
+    })
+    
+    // Mesh
+    //const mesh = new THREE.Mesh(geometry, material)
+    const mesh = new THREE.Mesh(geometry, shaderMaterial)
+
+    scene.add(mesh)
+    
+    /**
+     * Sizes
+     */
+    const sizes = {
+        width: window.innerWidth,
+        height: window.innerHeight
     }
-    function createSphere(){
-        const sphereGeometry = new THREE.SphereGeometry(50, 20, 20);
-        const sphereMat = new THREE.MeshBasicMaterial();
-        sphereMat.color = new THREE.Color("rgb(214, 35, 41)")
-        const sphere = new THREE.Mesh(sphereGeometry, sphereMat);
-        scene.add(sphere);
-    };
     
+    window.addEventListener('resize', () =>
+    {
+        // Update sizes
+        sizes.width = window.innerWidth
+        sizes.height = window.innerHeight
     
-
-  //--------------------------------------------------------------------
-
-  /*useEffect(() => { 
-    //page listener 
-      const url = window.location.href;
-      const urlEnd = url.substring(url.lastIndexOf('/') + 1);
-      setCurrentPage(currentPage = urlEnd)
-  });*/
-
-  const animateParticles = (event) => {
-    mouseY = event.clientY;
-    mouseX = event.clientX;
-  };
-  document.addEventListener("mousemove", animateParticles);
-    let mouseX = 0;
-    let mouseY = 0
-  const clock = new THREE.Clock();
-  function animation() {
-    requestAnimationFrame(animation);
-    const elapsedTime = clock.getElapsedTime();
-    particlesMesh.rotation.y = mouseX * (elapsedTime * 0.00008);
-    particlesMesh.rotation.x = mouseY * (elapsedTime * 0.00008);
-
-    var performance = Date.now() * 0.003;
-
-    camera.lookAt(scene.position);
-    renderer.render(scene, camera);
-  }
+        // Update camera
+        camera.aspect = sizes.width / sizes.height
+        camera.updateProjectionMatrix()
+    
+        // Update renderer
+        renderer.setSize(sizes.width, sizes.height)
+        renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
+    })
+    
+    /**
+     * Camera
+     */
+    // Base camera
+    const camera = new THREE.PerspectiveCamera(75, sizes.width / sizes.height, 0.1, 100)
+    camera.position.set(0.25, - 0.25, 1)
+    scene.add(camera)
+    
+    // Controls
+    const controls = new OrbitControls(camera, canvas)
+    controls.enableDamping = true
+    
+    /**
+     * Renderer
+     */
+    const renderer = new THREE.WebGLRenderer({
+        canvas: canvas
+    })
+    renderer.setSize(sizes.width, sizes.height)
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
+    
+    /**
+     * Animate
+     */
+    const clock = new THREE.Clock()
+    
+    const tick = () =>
+    {
+        const elapsedTime = clock.getElapsedTime()
+    
+        // Update controls
+        controls.update()
+    
+        // Render
+        renderer.render(scene, camera)
+    
+        // Call tick again on the next frame
+        window.requestAnimationFrame(tick)
+    }
+    
+    tick()
+  })
 
   return (
-    <div className="background" id="container">
+    <div className="background" id="background">
       <canvas id="webglCanvas" className="webgl"></canvas>
     </div>
   );

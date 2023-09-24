@@ -38,10 +38,6 @@ const Header = ({children, ...props}) => {
 				<nav className={burgerClassName} id="burger-list">
 					{isHome ? "" : <><a className="nav-item" href="/">Home</a><p className="desktop-only">|</p></>}
 					<NavLink className="nav-item" to="my-account">My Account</NavLink><p className="desktop-only">|</p>
-					<NavLink className="nav-item" id="nav-login" to='Login'>Login</NavLink><p className="desktop-only">|</p>
-					{!isLoading && isAuthenticated && (
-						<NavLink className="nav-item" onClick={logout}>Logout</NavLink>
-					)}
 					<NavLink className="nav-item" id="nav-login" to='support'>Support</NavLink>
 				</nav>
 			</button>

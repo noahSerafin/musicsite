@@ -1,7 +1,7 @@
 import React from "react";
 import "./Home.scss";
-import ThreeDBackground from "../../components/3Dbackground/ThreeDBackgroundC";//R
-import Collage from "../../components/Collage/Collage";
+import ThreeDBackground from "../../components/3Dbackground/ThreeDBackground";//R
+import { NavLink } from "react-router-dom";
 //import ProductTapes from "../../components/ProductTapes/ProductTapes";
 //import ShaderBackground from "../../components/ShaderBackground/ShaderBackgroundStarter";
 
@@ -13,11 +13,9 @@ const Home = () => {
     <div className="homepage-container">
       <div className="homepage-container__top">
         <div className="homepage-container__top__title-container">
-          <h1 className="homepage-container__top__title-container__title">JOIN THE WEB</h1>
+          <h1 className="homepage-container__top__title-container__title">GET HEARD</h1>
           <h4 className="homepage-container__top__title-container__subtitle">LOREM IPSUM DOLOR SIT AMET <br></br>consectetur adipiscing elit</h4>
-        </div>
-        <div className="homepage-container__top__collage-container">
-          <Collage />
+          <NavLink className="homepage__link" to="my-account">Go to Account</NavLink>
         </div>
       </div>
     </div>

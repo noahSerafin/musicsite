@@ -4,6 +4,21 @@
   background-color: transparent;//#000;
   font-family: "Futura Bold";
   overflow: hidden;
+  .homepage__link{
+    background-color: white;
+    font-size: 2rem;
+    padding: 0.4rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    border-radius: 2rem;
+    color: black;
+    text-decoration: none;
+    transition: color 0.5s ease-in-out;
+    &:hover{
+      text-decoration: none;
+      color: $threetonered;
+    }
+  }
 }
 .homepage-container__top{
     position: relative;
@@ -54,6 +69,7 @@
       font-style: italic;
       font-size: 21px;
       font-weight: 100;
+      margin-bottom: 6rem;
     }
     .homepage-container__top__collage-container{
       position: absolute;
