@@ -24,22 +24,22 @@
     }
     .change-details__header__nav:hover{
         cursor: pointer;
-        color: $threetonered;
+        color: $primary;
     }
 }
 .info{
     :nth-child(1){
-        color: $threetonered;
+        color: $primary;
     }
 }
 .password{
     :nth-child(2){
-        color: $threetonered;
+        color: $primary;
     }
 }
 .billing{
     :nth-child(3){
-        color: $threetonered;
+        color: $primary;
     }
 }
 .change-details__container{

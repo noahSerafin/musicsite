@@ -1,10 +1,27 @@
 @use "../../sass/variables.scss" as *;
 
+body{
+  overflow-y: hidden;
+}
 .header{
+  padding-left: 2rem;
+  padding-right: 2rem;
   position: relative;
+  flex-basis: 0;
+  .header__item{
+    flex: 1;
+    .nav-item{
+      color: white;
+      text-transform: uppercase;
+      text-decoration: none;
+      font-weight: bold;
+      &:hover{
+        color: $complimentary;
+      }
+    }
+  }
     background-color: #000;
     background-color: transparent;
-    width: 100%;
     height: 116px;
     padding-top: 45px;
     display: flex;
@@ -104,14 +121,15 @@
     }
     .header__burger__container:hover{
       .header-menu-line{
-        color: $threetonered;
-        background-color: $threetonered;
+        color: $primary;
+        background-color: $complimentary;
       }
       cursor: pointer;
     }
     .header__logo{
       width: 20%;
       .header__logo__home-link{
+        text-align: center;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -131,35 +149,15 @@
       }
     }
     .header__socials{
-      width: 20%;
       display: flex;
-      justify-content: space-evenly;
-      #amplify{
-        visibility: hidden;
-        transform: scale(0.095);
-        position: relative;
-        top: -52px;
-        right: 10px;
-        @include xs{
-          top: -31px;
-          right: 3px;
-        }
-        path{
-          transition: color .5s ease;
-          fill: white;
-        }
-      }
-      #amplify:hover{
-        path{
-          visibility: hidden;
-          fill: $threetonered;
-        }
-      }
+      justify-content: flex-end;
+      //padding-left: 200px;
       .header__socials__nav-item{
-        width: 15px;
+        width: 32px;
+        margin-left: 2rem;
         color: white;
         &:hover{
-          color: $threetonered;
+          color: $complimentary;
         }
       }
       .iconify{
@@ -170,7 +168,12 @@
         }
       }
       .iconify:hover{
-        color:$threetonered;
+        color:$complimentary;
       }
     }
-  }
+    @media (max-width: 620px) {
+      .burger-list{
+        display: none;
+      }
+    }
+}

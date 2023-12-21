@@ -48,7 +48,7 @@
         color: white;//#000;
         margin: 0.1rem;
         font-size: 4em;
-        color: $threetonered;
+        color: $primary;
     
         .subscription-details{
           width: 90%;
@@ -76,14 +76,14 @@
 .product:hover{
     cursor: pointer;
     background-color: white;
-    border-color: $threetonered;
-    color: $threetonered;
+    border-color: $primary;
+    color: $primary;
     .product__title-container__title{
-    color: $threetonered;
+    color: $primary;
     }
     .product__description{
-    box-shadow: $threetonered 10px 10px 0px 0px, $threetonered 10px 10px 0px 1px;
-    //background-color: $threetonered;
+    box-shadow: $primary 10px 10px 0px 0px, $primary 10px 10px 0px 1px;
+    //background-color: $primary;
     }
 }
 .non-mobile{
@@ -95,7 +95,7 @@
         }
         .price{
           font-size: 3em;
-          color: $threetonered;
+          color: $primary;
         }
     }
 }

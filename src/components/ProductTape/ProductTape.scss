@@ -45,11 +45,11 @@
     }
     .flip-button:hover{
         cursor: pointer;
-        //color: $threetonered;
-        //background-color: $threetonered;
+        //color: $primary;
+        //background-color: $primary;
         //opacity: 50%;
         .flip-button__text{
-            color: $threetonered;
+            color: $primary;
         }
     }
 }

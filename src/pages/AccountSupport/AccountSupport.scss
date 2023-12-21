@@ -21,7 +21,7 @@
                 margin-bottom: 2%;
             }
             .account-support__halver__left__msg:focus, .account-support__halver__left__email:focus{
-                outline: 2px solid $threetonered;
+                outline: 2px solid $primary;
             }
             .account-support__halver__left__button{
                position: absolute;
@@ -34,7 +34,7 @@
             }
             .account-support__halver__left__button:hover{
                 cursor: pointer;
-                color: $threetonered;
+                color: $primary;
             }
         }
         .account-support__halver__right{

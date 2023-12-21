@@ -85,7 +85,7 @@
             "g g g g g t";
             .analytics-royalties-container__data__overview__graph{
                 grid-area: g;
-                //border: 1px dotted $threetonered;
+                //border: 1px dotted $primary;
             }
             .analytics-royalties-container__data__overview__ytd{
                 grid-area: y;
@@ -116,11 +116,11 @@
         }
         .analytics-royalties-container__data__breakdowns__list{
             height: 20%;//300px;
-            //border: 1px dotted $threetonered;
+            //border: 1px dotted $primary;
         }
         .analytics-royalties-container__data__breakdowns__graph{
             height: 300px;
-            //border: 1px dotted $threetonered;
+            //border: 1px dotted $primary;
         }
         .analytics-royalties-container__data__breakdowns__graph--pie{
             height: 300px;

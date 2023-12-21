@@ -23,26 +23,17 @@ const Header = ({children, ...props}) => {
 	const handleClick = () => {
 		setShowMenu(!showMenu);
 	}   
-	const burgerClassName = `burger-list${
-        showMenu ? "--anim" : ""
+	const burgerClassName = `burger-list ${
+        showMenu ? "--anim header__item" : "header__item"
     }`
 
     return(
         <header className={className} id="header">
-            <button id="header__burger" className="header__burger"  onClick={handleClick}>
-				<div className="header__burger__container" id="burger-open">
-					<svg aria-hidden="true" role="img" className="iconify iconify--openmoji" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 72 72" id="burger" data-icon="openmoji:hamburger-menu">
-						<path fill="none" stroke="#000" strokeLinecap="round" strokeLinejoin="round" strokeMiterlimit="10" strokeWidth="2" d="M16 26h40M16 36h40M16 46h40"></path>
-					</svg>
-				</div>
-				<nav className={burgerClassName} id="burger-list">
-					{isHome ? "" : <><a className="nav-item" href="/">Home</a><p className="desktop-only">|</p></>}
-					<NavLink className="nav-item" to="my-account">My Account</NavLink><p className="desktop-only">|</p>
-					<NavLink className="nav-item" id="nav-login" to='support'>Support</NavLink>
-				</nav>
-			</button>
+			<nav className={burgerClassName} id="burger-list">
+				<NavLink className="nav-item" to="my-account">My Account</NavLink>
+			</nav>
 
-			<div className="header__logo">
+			<div className="header__logo header__item">
 				<a href="/Home" className="header__logo__home-link">
 					<div className="header__logo__home-link__logo">
 						<svg xmlns="http://www.w3.org/2000/svg" width="54" height="54" viewBox="0 0 24 24">
@@ -56,7 +47,7 @@ const Header = ({children, ...props}) => {
 				</a>
 			</div>
 
-			<div className="header__socials">
+			<div className="header__socials header__item">
 				<script src="https://code.iconify.design/2/2.2.1/iconify.min.js"></script>
 				<a className="header__socials__nav-item" href="/">
 					<svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" viewBox="0 0 24 24">

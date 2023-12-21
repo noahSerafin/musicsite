@@ -87,7 +87,7 @@
         }
         //:nth-child(2){
          //   text-transform: uppercase;
-        //    background-color: $threetonered;
+        //    background-color: $primary;
         //}
         .my-account__container__top__options__nav--user:hover,  .my-account__container__top__options__nav--settings:hover{
             cursor: pointer;
@@ -172,11 +172,11 @@
             border: none;
         }
         .active, .my-account__container__left__nav:hover{
-            color: $threetonered;
+            color: $primary;
             cursor: pointer;
             .my-account__container__left__nav__icon{
                 path{
-                    color: $threetonered;
+                    color: $primary;
                 }
             }
         }
@@ -193,43 +193,43 @@
     .acc-support{
         :nth-child(7){
             background-color: #5c5c5c;
-            //color: $threetonered;
+            //color: $primary;
         }
     }
     .details{
         :nth-child(7){
             background-color: #5c5c5c;
-            //color: $threetonered;
+            //color: $primary;
         }
     }
     .music{
         :nth-child(2){
             background-color: #5c5c5c;
-            //color: $threetonered;
+            //color: $primary;
         }
     }
     .analytics{
         :nth-child(3){
             background-color: #5c5c5c;
-            //color: $threetonered;
+            //color: $primary;
         }
     }
     .royalties{
         :nth-child(4){
             background-color: #5c5c5c;
-            //color: $threetonered;
+            //color: $primary;
         }
     }
     .add-ons{
         :nth-child(5){
             background-color: #5c5c5c;
-            //color: $threetonered;
+            //color: $primary;
         }
     }
     .amplify{
         :nth-child(5){
             background-color: #5c5c5c;
-            //color: $threetonered;
+            //color: $primary;
         }
     }
 }

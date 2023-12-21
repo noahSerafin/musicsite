@@ -1,7 +1,7 @@
 @use "../../sass/variables.scss" as *;
 
 .upload-form__span{
-    color: $threetonered;
+    color: $primary;
 }
 .upload-form{
     overflow-x: hidden;
@@ -44,7 +44,7 @@
     }
     .upload-form__header__progress1 p:nth-child(1){
         font-weight: bold;
-        //background-color: $threetonered;
+        //background-color: $primary;
     }
     .upload-form__header__progress2 p:nth-child(2){
         font-weight: bold;
@@ -143,7 +143,7 @@
                 align-items: center;
                 width: 100%;
                 height: 100%;
-                background-color: $threetonered;
+                background-color: $primary;
                 border: none;
                 border-radius: 5px;
                 color: $offwhite;

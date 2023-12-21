@@ -12,7 +12,6 @@ const Layout = ({ children }) => {
     <>
       <Header page={useLocation().pathname}/>
       <main>{children}</main>
-      <Footer />
     </>
   );
 };

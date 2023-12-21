@@ -24,7 +24,7 @@
     .collage__img{
       position: absolute;
       transform: scale(0.35);
-      box-shadow: black 10px 10px 0px 0px, $threetonered 10px 10px 0px 2px;
+      box-shadow: black 10px 10px 0px 0px, $primary 10px 10px 0px 2px;
       @include lm{
         transform: scale(0.3);
       }

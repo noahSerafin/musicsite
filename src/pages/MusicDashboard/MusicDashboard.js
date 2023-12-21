@@ -66,8 +66,8 @@ const MusicDashboard = () => {
                 return(
                     <div className="music-dashboard">
                         <div className="music-dashboard__header">
-                            <h1 className="music-dashboard__header__title">Music Catalogue:</h1>
-                            <button className="music-dashboard__header__button" onClick={() => setPage("Upload")}>UPLOAD NEW RELEASE +</button>
+                            <h1 className="music-dashboard__header__title">Catalogue:</h1>
+                            <button className="music-dashboard__header__button" onClick={() => setPage("Upload")}>UPLOAD NEW +</button>
                         </div>
                         <div className={className}>
                             <Catalogue editProduct={editProduct}/>

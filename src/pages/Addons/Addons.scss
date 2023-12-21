@@ -1,7 +1,7 @@
 @use "../../sass/variables.scss" as *;
 
 $graygradient: linear-gradient(black, #545454);
-$redgradient: -webkit-linear-gradient($threetonered, #545454);
+$redgradient: -webkit-linear-gradient($primary, #545454);
 
 .addons{
     width: 100%;
@@ -71,7 +71,7 @@ $redgradient: -webkit-linear-gradient($threetonered, #545454);
         }
         .addons__content__btn:hover{
             cursor: pointer;
-            color: $threetonered;
+            color: $primary;
         }
         /*.playlist{
             grid-area: a;
